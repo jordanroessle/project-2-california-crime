@@ -1,0 +1,463 @@
+,Department_Name,State,County,City,Ori,Agg_Assult,Sex_Offences,Manslaughter_Neg,Murder_and_Nonneg_Man,Rape,Robbery,Simp_Assult,Humman_Trafficking_Commercial_SA,Humman_Trafficking_Invol_Ser,Offences_Total
+1,Alameda Police Department,CA,ALAMEDA,Alameda,CA0010100,90,12,0,0,1,18,197,0,0,318
+2,Albany Police Department,CA,ALAMEDA,Albany,CA0010200,18,3,0,0,3,4,26,0,0,54
+3,Berkeley Police Department,CA,ALAMEDA,Berkeley,CA0010300,194,28,0,2,6,99,211,0,0,540
+4,Emeryville Police Department,CA,ALAMEDA,Emeryville,CA0010400,38,3,0,0,4,22,75,0,0,142
+5,Fremont Police Department,CA,ALAMEDA,Fremont,CA0010500,160,27,0,4,6,87,179,0,0,463
+6,Hayward Police Department,CA,ALAMEDA,Hayward,CA0010600,247,36,0,0,3,31,307,0,0,624
+7,Livermore Police Department,CA,ALAMEDA,Livermore,CA0010700,147,14,0,1,1,10,208,0,0,381
+8,Newark Police Department,CA,ALAMEDA,Newark,CA0010800,44,3,0,1,1,11,81,0,0,141
+9,Oakland Police Department,CA,ALAMEDA,Oakland,CA0010900,934,68,1,37,28,347,1871,0,0,3286
+10,Piedmont Police Department,CA,ALAMEDA,Piedmont,CA0011000,0,0,0,0,0,2,6,0,0,8
+11,Pleasanton Police Department,CA,ALAMEDA,Pleasanton,CA0011100,46,9,0,0,0,20,86,0,0,161
+12,San Leandro Police Department,CA,ALAMEDA,San Leandro,CA0011200,161,19,0,1,2,87,163,0,0,433
+13,Union City Police Department,CA,ALAMEDA,Union City,CA0011300,122,8,0,0,1,39,93,0,0,263
+18,Dublin Police Department,CA,ALAMEDA,Dublin,CA001300X,79,7,0,1,0,19,79,0,0,185
+24,Ione Police Department,CA,AMADOR,Ione,CA0030200,8,1,0,0,1,0,11,0,0,21
+25,Jackson Police Department,CA,AMADOR,Jackson,CA0030300,19,0,0,0,0,0,6,0,0,25
+26,Sutter Creek Police Department,CA,AMADOR,Sutter Creek,CA0030500,4,0,0,0,0,0,4,0,0,8
+30,Biggs Police Department,CA,BUTTE,Biggs,CA0040100,1,0,0,0,0,0,5,0,0,6
+31,Chico Police Department,CA,BUTTE,Chico,CA0040200,234,28,1,0,9,31,432,0,0,735
+32,Gridley Police Department,CA,BUTTE,Gridley,CA0040300,11,2,0,0,0,3,32,0,0,48
+33,Oroville Police Department,CA,BUTTE,Oroville,CA0040400,71,16,0,2,2,12,120,0,0,223
+34,Paradise Police Department,CA,BUTTE,Paradise,CA0040500,13,2,0,0,0,1,14,0,0,30
+40,City of Angels Police Department,CA,CALAVERAS,City of Angels,CA0050100,9,3,0,0,0,0,13,0,0,25
+45,Colusa Police Department,CA,COLUSA,Colusa,CA0060100,15,1,0,0,0,0,30,0,0,46
+46,Williams Police Department,CA,COLUSA,Williams,CA0060200,15,2,0,0,1,1,15,0,0,34
+50,Antioch Police Department,CA,CONTRA COSTA,Antioch,CA0070100,247,46,1,25,10,102,399,0,0,830
+51,Brentwood Police Department,CA,CONTRA COSTA,Brentwood,CA0070200,47,4,0,0,3,26,173,0,0,253
+52,Clayton Police Department,CA,CONTRA COSTA,Clayton,CA0070300,0,0,0,0,0,0,4,0,0,4
+53,Concord Police Department,CA,CONTRA COSTA,Concord,CA0070400,210,29,0,3,5,66,274,0,0,587
+54,El Cerrito Police Department,CA,CONTRA COSTA,El Cerrito,CA0070500,25,4,0,1,1,15,40,0,0,86
+55,Hercules Police Department,CA,CONTRA COSTA,Hercules,CA0070600,26,1,0,0,0,3,18,0,0,48
+56,Pinole Police Department,CA,CONTRA COSTA,Pinole,CA0070700,21,1,0,0,1,4,25,0,0,52
+57,Pittsburg Police Department,CA,CONTRA COSTA,Pittsburg,CA0070800,228,23,1,5,3,52,266,0,0,578
+58,Pleasant Hill Police Department,CA,CONTRA COSTA,Pleasant Hill,CA0070900,28,5,0,1,1,19,78,0,0,132
+59,Richmond Police Department,CA,CONTRA COSTA,Richmond,CA0071000,330,17,0,3,5,67,265,0,0,687
+60,San Pablo Police Department,CA,CONTRA COSTA,San Pablo,CA0071100,142,15,0,2,0,57,117,0,0,333
+61,Walnut Creek Police Department,CA,CONTRA COSTA,Walnut Creek,CA0071200,42,11,0,1,2,8,76,0,0,140
+62,Kensington Police Department,CA,CONTRA COSTA,Kensington,CA0071300,1,0,0,0,0,0,1,0,0,2
+63,Martinez Police Department,CA,CONTRA COSTA,Martinez,CA0071400,22,3,0,0,2,8,59,0,0,94
+64,Lafayette Police Department,CA,CONTRA COSTA,Lafayette,CA0071500,5,1,0,0,0,1,8,0,0,15
+65,Moraga Police Department,CA,CONTRA COSTA,Moraga,CA0071600,4,0,0,0,0,7,3,0,0,14
+68,Danville Police Department,CA,CONTRA COSTA,Danville,CA007230X,15,3,0,0,0,0,21,0,0,39
+69,San Ramon Police Department,CA,CONTRA COSTA,San Ramon,CA007240X,35,3,0,0,1,4,65,0,0,108
+70,Orinda Police Department,CA,CONTRA COSTA,Orinda,CA007260X,2,0,0,0,0,0,4,0,0,6
+72,Oakley Police Department,CA,CONTRA COSTA,Oakley,CA007340X,29,7,0,0,1,4,62,0,0,103
+75,Crescent City Police Department,CA,DEL NORTE,Crescent City,CA0080100,35,8,0,0,0,6,57,0,0,106
+78,Placerville Police Department,CA,EL DORADO,Placerville,CA0090100,39,2,0,0,1,4,37,0,0,83
+79,South Lake Tahoe Police Department,CA,EL DORADO,South Lake Tahoe,CA0090200,127,12,0,1,3,12,110,0,0,265
+83,Clovis Police Department,CA,FRESNO,Clovis,CA0100100,232,24,0,0,9,23,285,0,0,573
+84,Coalinga Police Department,CA,FRESNO,Coalinga,CA0100200,22,2,0,0,0,0,37,0,0,61
+85,Firebaugh Police Department,CA,FRESNO,Firebaugh,CA0100300,19,3,0,0,1,2,12,0,0,37
+86,Fowler Police Department,CA,FRESNO,Fowler,CA0100400,19,2,0,0,1,2,19,0,0,43
+87,Fresno Police Department,CA,FRESNO,Fresno,CA0100500,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+88,Huron Police Department,CA,FRESNO,Huron,CA0100600,36,9,0,0,0,8,55,0,0,108
+89,Kerman Police Department,CA,FRESNO,Kerman,CA0100700,35,1,0,0,1,2,34,0,0,73
+90,Kingsburg Police Department,CA,FRESNO,Kingsburg,CA0100800,32,1,0,0,0,2,18,0,0,53
+91,Mendota Police Department,CA,FRESNO,Mendota,CA0100900,59,4,0,0,1,5,33,0,0,102
+92,Orange Cove Police Department,CA,FRESNO,Orange Cove,CA0101000,35,4,0,0,1,3,20,0,0,63
+93,Parlier Police Department,CA,FRESNO,Parlier,CA0101100,52,5,0,0,0,6,63,0,0,126
+94,Reedley Police Department,CA,FRESNO,Reedley,CA0101200,87,10,0,0,1,8,92,0,0,198
+95,Sanger Police Department,CA,FRESNO,Sanger,CA0101300,77,6,0,0,0,13,93,0,0,189
+96,Selma Police Department,CA,FRESNO,Selma,CA0101500,63,7,0,0,2,14,104,0,0,190
+105,Orland Police Department,CA,GLENN,Orland,CA0110100,12,1,0,0,0,1,29,0,0,43
+109,Arcata Police Department,CA,HUMBOLDT,Arcata,CA0120100,47,6,0,1,0,9,68,0,0,131
+110,Eureka Police Department,CA,HUMBOLDT,Eureka,CA0120300,158,32,0,4,1,30,162,0,0,387
+111,Ferndale Police Department,CA,HUMBOLDT,Ferndale,CA0120400,1,0,0,0,0,0,3,0,0,4
+112,Fortuna Police Department,CA,HUMBOLDT,Fortuna,CA0120500,32,1,0,0,0,4,41,0,0,78
+113,Rio Dell Police Department,CA,HUMBOLDT,Rio Dell,CA0120700,15,1,0,0,0,0,16,0,0,32
+119,Brawley Police Department,CA,IMPERIAL,Brawley,CA0130100,62,9,0,2,1,0,108,0,0,182
+120,Calexico Police Department,CA,IMPERIAL,Calexico,CA0130200,44,6,0,0,6,8,76,0,0,140
+121,Calipatria Police Department,CA,IMPERIAL,Calipatria,CA0130300,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+122,El Centro Police Department,CA,IMPERIAL,El Centro,CA0130400,81,8,0,1,1,20,168,0,0,279
+123,Holtville Police Department,CA,IMPERIAL,Holtville,CA0130500,0,1,0,0,0,1,3,0,0,5
+124,Imperial Police Department,CA,IMPERIAL,Imperial,CA0130600,10,2,0,0,0,0,15,0,0,27
+125,Westmorland Police Department,CA,IMPERIAL,Westmorland,CA0130700,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+129,Bishop Police Department,CA,INYO,Bishop,CA0140100,25,2,0,0,0,3,26,0,0,56
+133,Arvin Police Department,CA,KERN,Arvin,CA0150100,74,5,0,0,0,2,39,0,0,120
+134,Bakersfield Police Department,CA,KERN,Bakersfield,CA0150200,901,91,4,38,36,240,1516,0,0,2826
+135,Delano Police Department,CA,KERN,Delano,CA0150300,77,15,1,3,1,11,140,0,0,248
+136,McFarland Police Department,CA,KERN,McFarland,CA0150500,42,2,0,1,0,4,50,0,0,99
+137,Ridgecrest Police Department,CA,KERN,Ridgecrest,CA0150600,120,6,0,3,2,4,129,0,0,264
+138,Shafter Police Department,CA,KERN,Shafter,CA0150700,65,3,0,0,0,4,78,0,0,150
+139,Taft Police Department,CA,KERN,Taft,CA0150800,24,5,0,0,0,3,48,0,0,80
+140,Tehachapi Police Department,CA,KERN,Tehachapi,CA0150900,62,2,0,2,3,8,38,0,0,115
+141,California City Police Department,CA,KERN,California City,CA0151100,51,5,2,0,3,7,40,0,0,108
+142,Stallion Springs Police Department,CA,KERN,Stallion Springs,CA0151400,2,0,0,0,0,0,3,0,0,5
+143,Bear Valley Police Department,CA,KERN,Bear Valley,CA0151500,7,0,0,0,0,0,6,0,0,13
+149,Corcoran Police Department,CA,KINGS,Corcoran,CA0160100,52,6,0,0,5,1,32,0,0,96
+150,Hanford Police Department,CA,KINGS,Hanford,CA0160200,133,31,1,4,4,15,202,0,0,390
+151,Lemoore Police Department,CA,KINGS,Lemoore,CA0160300,118,19,0,2,2,4,71,0,0,216
+154,Avenal Police Department,CA,KINGS,Avenal,CA016070X,85,15,0,0,3,3,33,0,0,139
+157,Lakeport Police Department,CA,LAKE,Lakeport,CA0170100,25,4,0,0,0,3,28,0,0,60
+158,Clearlake Police Department,CA,LAKE,Clearlake,CA0170200,117,11,0,1,2,19,111,0,0,261
+161,Susanville Police Department,CA,LASSEN,Susanville,CA0180100,38,3,0,0,0,0,34,0,0,75
+165,Alhambra Police Department,CA,LOS ANGELES,Alhambra,CA0190100,122,12,0,3,1,26,111,0,0,275
+166,Arcadia Police Department,CA,LOS ANGELES,Arcadia,CA0190200,67,2,0,1,1,12,44,0,0,127
+167,Artesia Police Department,CA,LOS ANGELES,Artesia,CA0190300,19,5,0,4,1,8,23,0,0,60
+168,Avalon Police Department,CA,LOS ANGELES,Avalon,CA0190400,11,2,0,0,1,1,22,0,0,37
+169,Azusa Police Department,CA,LOS ANGELES,Azusa,CA0190500,98,9,0,2,11,14,85,0,0,219
+170,Baldwin Park Police Department,CA,LOS ANGELES,Baldwin Park,CA0190600,101,12,1,0,3,18,85,0,0,220
+171,Bell Police Department,CA,LOS ANGELES,Bell,CA0190700,79,9,0,0,1,14,96,0,0,199
+172,Bellflower Police Department,CA,LOS ANGELES,Bellflower,CA0190800,211,14,0,1,6,28,108,0,0,368
+173,Bell Gardens Police Department,CA,LOS ANGELES,Bell Gardens,CA0190900,69,11,0,0,1,23,71,0,0,175
+175,La Habra Heights Police Department,CA,LOS ANGELES,La Habra Heights,CA0190D0X,5,0,0,0,0,0,0,0,0,5
+179,Westlake Village Police Department,CA,LOS ANGELES,Westlake Village,CA0190X0X,4,2,0,0,0,1,5,0,0,12
+180,Beverly Hills Police Department,CA,LOS ANGELES,Beverly Hills,CA0191000,69,21,1,0,1,45,122,0,0,259
+181,Bradbury Police Department,CA,LOS ANGELES,Bradbury,CA0191100,1,0,0,0,0,0,1,0,0,2
+182,Burbank Police Department,CA,LOS ANGELES,Burbank,CA0191200,173,23,0,3,2,27,240,0,0,468
+183,Claremont Police Department,CA,LOS ANGELES,Claremont,CA0191300,65,8,0,0,3,13,82,0,0,171
+184,Commerce Police Department,CA,LOS ANGELES,Commerce,CA0191400,42,6,0,0,1,13,24,0,0,86
+185,Compton Police Department,CA,LOS ANGELES,Compton,CA0191500,296,23,0,5,11,121,114,0,0,570
+186,Covina Police Department,CA,LOS ANGELES,Covina,CA0191600,96,12,0,1,4,29,176,0,0,318
+187,Cudahy Police Department,CA,LOS ANGELES,Cudahy,CA0191700,33,6,0,1,1,6,17,0,0,64
+188,Culver City Police Department,CA,LOS ANGELES,Culver City,CA0191800,78,14,0,0,0,83,91,0,0,266
+189,Cerritos Police Department,CA,LOS ANGELES,Cerritos,CA0191900,44,5,0,2,3,24,46,0,0,124
+190,Agoura Hills Police Department,CA,LOS ANGELES,Agoura Hills,CA0191F00,8,0,0,0,2,1,12,0,0,23
+191,West Hollywood Police Department,CA,LOS ANGELES,West Hollywood,CA0191H0X,133,17,0,0,3,48,172,0,0,373
+193,Santa Clarita Police Department,CA,LOS ANGELES,Santa Clarita,CA0191R0X,309,28,1,2,11,41,217,0,0,609
+194,Diamond Bar Police Department,CA,LOS ANGELES,Diamond Bar,CA0191W0X,45,4,0,0,1,4,18,0,0,72
+195,Downey Police Department,CA,LOS ANGELES,Downey,CA0192000,190,26,0,5,9,65,140,0,0,435
+196,Duarte Police Department,CA,LOS ANGELES,Duarte,CA0192100,26,2,0,0,0,5,21,0,0,54
+197,El Monte Police Department,CA,LOS ANGELES,El Monte,CA0192200,345,33,0,5,12,69,213,0,0,677
+198,El Segundo Police Department,CA,LOS ANGELES,El Segundo,CA0192300,31,1,0,0,0,12,25,0,0,69
+199,Gardena Police Department,CA,LOS ANGELES,Gardena,CA0192400,121,12,0,4,3,41,96,0,0,277
+200,Glendale Police Department,CA,LOS ANGELES,Glendale,CA0192500,250,45,0,10,9,71,469,0,0,854
+201,Glendora Police Department,CA,LOS ANGELES,Glendora,CA0192600,84,11,0,0,6,22,113,0,0,236
+202,Hawaiian Gardens Police Department,CA,LOS ANGELES,Hawaiian Gardens,CA0192700,37,4,0,0,0,9,23,0,0,73
+203,Hawthorne Police Department,CA,LOS ANGELES,Hawthorne,CA0192800,206,9,1,2,6,71,242,0,0,537
+204,Hermosa Beach Police Department,CA,LOS ANGELES,Hermosa Beach,CA0192900,15,4,1,0,0,5,32,0,0,57
+205,Calabasas Police Department,CA,LOS ANGELES,Calabasas,CA0192H0X,13,4,0,0,2,3,20,0,0,42
+206,Malibu Police Department,CA,LOS ANGELES,Malibu,CA0192J0X,25,4,0,1,0,8,14,0,0,52
+208,Hidden Hills Police Department,CA,LOS ANGELES,Hidden Hills,CA0193000,0,0,0,0,0,0,0,0,0,0
+209,Huntington Park Police Department,CA,LOS ANGELES,Huntington Park,CA0193100,184,25,0,2,6,73,143,0,0,433
+210,Industry Police Department,CA,LOS ANGELES,Industry,CA0193200,22,4,0,0,0,18,20,0,0,64
+211,Inglewood Police Department,CA,LOS ANGELES,Inglewood,CA0193300,160,19,0,7,8,70,177,0,0,441
+212,Irwindale Police Department,CA,LOS ANGELES,Irwindale,CA0193400,6,0,0,0,0,2,6,0,0,14
+213,Lakewood Police Department,CA,LOS ANGELES,Lakewood,CA0193500,117,16,0,0,4,32,86,0,0,255
+214,La Mirada Police Department,CA,LOS ANGELES,La Mirada,CA0193600,56,8,1,0,1,14,30,0,0,110
+215,La Puente Police Department,CA,LOS ANGELES,La Puente,CA0193700,84,9,0,0,1,18,25,0,0,137
+216,La Verne Police Department,CA,LOS ANGELES,La Verne,CA0193800,17,0,0,0,1,11,34,0,0,63
+217,Lawndale Police Department,CA,LOS ANGELES,Lawndale,CA0193900,69,2,0,0,3,11,42,0,0,127
+218,Lomita Police Department,CA,LOS ANGELES,Lomita,CA0194000,27,0,0,0,0,14,22,0,0,63
+219,Long Beach Police Department,CA,LOS ANGELES,Long Beach,CA0194100,1366,107,7,16,21,255,1349,0,0,3121
+220,Los Angeles Police Department,CA,LOS ANGELES,Los Angeles,CA0194200,8829,662,6,121,231,2143,4692,0,0,16684
+221,Lynwood Police Department,CA,LOS ANGELES,Lynwood,CA0194300,209,16,0,3,5,47,68,0,0,348
+222,Manhattan Beach Police Department,CA,LOS ANGELES,Manhattan Beach,CA0194400,40,3,0,0,3,23,42,0,0,111
+223,Maywood Police Department,CA,LOS ANGELES,Maywood,CA0194500,39,3,0,1,2,9,17,0,0,71
+224,Monrovia Police Department,CA,LOS ANGELES,Monrovia,CA0194600,50,1,0,1,0,7,60,0,0,119
+225,Montebello Police Department,CA,LOS ANGELES,Montebello,CA0194700,123,8,0,2,2,32,104,0,0,271
+226,Monterey Park Police Department,CA,LOS ANGELES,Monterey Park,CA0194800,89,10,0,4,1,9,53,0,0,166
+227,Norwalk Police Department,CA,LOS ANGELES,Norwalk,CA0194900,235,166,0,1,9,43,96,0,0,550
+228,Palmdale Police Department,CA,LOS ANGELES,Palmdale,CA0195000,452,8,1,4,2,91,321,0,0,879
+229,Palos Verdes Estates Police Department,CA,LOS ANGELES,Palos Verdes Estates,CA0195100,5,0,0,0,0,1,7,0,0,13
+230,Paramount Police Department,CA,LOS ANGELES,Paramount,CA0195200,136,15,1,2,4,41,68,0,0,267
+231,Pasadena Police Department,CA,LOS ANGELES,Pasadena,CA0195300,371,28,1,6,5,55,248,0,0,714
+232,Pico Rivera Police Department,CA,LOS ANGELES,Pico Rivera,CA0195400,114,20,0,2,4,18,72,0,0,230
+233,Pomona Police Department,CA,LOS ANGELES,Pomona,CA0195500,373,43,1,7,10,84,290,0,0,808
+234,Redondo Beach Police Department,CA,LOS ANGELES,Redondo Beach,CA0195600,80,16,0,0,2,26,131,0,0,255
+235,Rolling Hills Police Department,CA,LOS ANGELES,Rolling Hills,CA0195700,3,0,0,0,0,0,0,0,0,3
+236,Rolling Hills Estates Police Department,CA,LOS ANGELES,Rolling Hills Estates,CA0195800,7,0,0,0,0,3,5,0,0,15
+237,Rosemead Police Department,CA,LOS ANGELES,Rosemead,CA0195900,71,12,0,1,2,21,61,0,0,168
+238,San Dimas Police Department,CA,LOS ANGELES,San Dimas,CA0196000,33,5,0,0,0,9,34,0,0,81
+239,San Fernando Police Department,CA,LOS ANGELES,San Fernando,CA0196100,36,2,0,2,1,7,66,0,0,114
+240,San Gabriel Police Department,CA,LOS ANGELES,San Gabriel,CA0196200,57,5,0,1,3,11,58,0,0,135
+241,San Marino Police Department,CA,LOS ANGELES,San Marino,CA0196300,6,1,0,0,0,0,12,0,0,19
+242,Santa Fe Springs Police Department,CA,LOS ANGELES,Santa Fe Springs,CA0196400,52,3,0,3,3,12,37,0,0,110
+243,Santa Monica Police Department,CA,LOS ANGELES,Santa Monica,CA0196500,252,51,0,8,7,111,401,0,0,830
+244,Sierra Madre Police Department,CA,LOS ANGELES,Sierra Madre,CA0196600,7,0,0,0,0,0,7,0,0,14
+245,Signal Hill Police Department,CA,LOS ANGELES,Signal Hill,CA0196700,41,0,0,0,0,7,37,0,0,85
+246,South El Monte Police Department,CA,LOS ANGELES,South El Monte,CA0196800,57,6,0,0,1,10,34,0,0,108
+247,South Gate Police Department,CA,LOS ANGELES,South Gate,CA0196900,228,35,0,6,6,69,168,0,0,512
+248,South Pasadena Police Department,CA,LOS ANGELES,South Pasadena,CA0197000,23,6,0,0,0,5,38,0,0,72
+249,Temple City Police Department,CA,LOS ANGELES,Temple City,CA0197100,44,8,0,1,2,7,42,0,0,104
+250,Torrance Police Department,CA,LOS ANGELES,Torrance,CA0197200,152,20,2,0,4,85,132,0,0,395
+251,Vernon Police Department,CA,LOS ANGELES,Vernon,CA0197300,17,1,1,0,1,2,10,0,0,32
+252,Walnut Police Department,CA,LOS ANGELES,Walnut,CA0197400,23,1,0,0,0,7,9,0,0,40
+253,West Covina Police Department,CA,LOS ANGELES,West Covina,CA0197500,169,20,0,2,3,54,76,0,0,324
+254,Whittier Police Department,CA,LOS ANGELES,Whittier,CA0197600,150,12,0,2,2,24,96,0,0,286
+255,Carson Police Department,CA,LOS ANGELES,Carson,CA0197700,196,19,3,3,3,38,73,0,0,335
+257,Rancho Palos Verdes Police Department,CA,LOS ANGELES,Rancho Palos Verdes,CA0198000,16,1,0,0,0,0,8,0,0,25
+262,La Canada Flintridge Police Department,CA,LOS ANGELES,La Canada Flintridge,CA019900X,7,2,0,0,0,0,13,0,0,22
+263,Lancaster Police Department,CA,LOS ANGELES,Lancaster,CA019960X,783,29,1,3,5,179,429,0,0,1429
+268,Chowchilla Police Department,CA,MADERA,Chowchilla,CA0200100,39,1,1,0,1,0,36,0,0,78
+269,Madera Police Department,CA,MADERA,Madera,CA0200200,269,30,0,2,8,26,306,0,0,641
+273,Belvedere Police Department,CA,MARIN,Belvedere,CA0210100,0,0,0,0,0,0,1,0,0,1
+274,Fairfax Police Department,CA,MARIN,Fairfax,CA0210300,11,3,0,0,0,0,16,0,0,30
+275,Mill Valley Police Department,CA,MARIN,Mill Valley,CA0210500,10,2,0,0,0,3,9,0,0,24
+276,Novato Police Department,CA,MARIN,Novato,CA0210600,86,13,0,0,3,6,101,0,0,209
+277,Ross Police Department,CA,MARIN,Ross,CA0210700,1,0,0,0,1,0,0,0,0,2
+278,San Rafael Police Department,CA,MARIN,San Rafael,CA0210900,149,29,0,0,5,25,235,0,0,443
+279,Sausalito Police Department,CA,MARIN,Sausalito,CA0211000,9,1,0,0,0,1,12,0,0,23
+280,Tiburon Police Department,CA,MARIN,Tiburon,CA0211100,3,0,1,0,0,0,2,0,0,6
+284,Central Marin Police Department,CA,MARIN,Central Marin,CA0211700,29,1,0,1,0,1,34,0,0,66
+289,Fort Bragg Police Department,CA,MENDOCINO,Fort Bragg,CA0230100,34,0,0,0,1,4,41,0,0,80
+290,Ukiah Police Department,CA,MENDOCINO,Ukiah,CA0230300,96,3,0,1,1,11,138,0,0,250
+291,Willits Police Department,CA,MENDOCINO,Willits,CA0230400,44,1,0,0,0,6,39,0,0,90
+295,Atwater Police Department,CA,MERCED,Atwater,CA0240100,62,7,0,0,1,9,165,0,0,244
+296,Dos Palos Police Department,CA,MERCED,Dos Palos,CA0240200,26,1,0,0,0,1,22,0,0,50
+297,Gustine Police Department,CA,MERCED,Gustine,CA0240300,13,2,0,0,0,1,21,0,0,37
+298,Livingston Police Department,CA,MERCED,Livingston,CA0240400,27,2,0,0,1,6,41,0,0,77
+299,Los Banos Police Department,CA,MERCED,Los Banos,CA0240500,87,11,2,1,2,16,124,0,0,243
+300,Merced Police Department,CA,MERCED,Merced,CA0240600,354,54,1,15,13,48,503,0,0,988
+306,Alturas Police Department,CA,MODOC,Alturas,CA0250100,20,4,0,0,1,1,14,0,0,40
+310,Mammoth Lakes Police Department,CA,MONO,Mammoth Lakes,CA0260100,35,3,0,0,2,0,25,0,0,65
+313,Carmel Police Department,CA,MONTEREY,Carmel,CA0270100,11,1,0,0,0,0,14,0,0,26
+314,Del Rey Oaks Police Department,CA,MONTEREY,Del Rey Oaks,CA0270200,0,0,0,0,0,4,3,0,0,7
+315,Gonzales Police Department,CA,MONTEREY,Gonzales,CA0270300,19,3,0,0,1,5,27,0,0,55
+316,Greenfield Police Department,CA,MONTEREY,Greenfield,CA0270400,58,13,0,2,1,2,60,0,0,136
+317,King City Police Department,CA,MONTEREY,King City,CA0270500,17,2,0,0,0,3,12,0,0,34
+318,Monterey Police Department,CA,MONTEREY,Monterey,CA0270600,97,11,0,0,3,15,142,0,0,268
+319,Pacific Grove Police Department,CA,MONTEREY,Pacific Grove,CA0270700,5,2,0,0,0,5,22,0,0,34
+320,Salinas Police Department,CA,MONTEREY,Salinas,CA0270800,381,47,0,7,11,83,351,0,0,880
+321,Sand City Police Department,CA,MONTEREY,Sand City,CA0270900,0,0,0,0,0,1,6,0,0,7
+322,Seaside Police Department,CA,MONTEREY,Seaside,CA0271000,57,3,0,0,0,2,56,0,0,118
+323,Soledad Police Department,CA,MONTEREY,Soledad,CA0271100,36,7,0,0,3,9,63,0,0,118
+324,Marina Police Department,CA,MONTEREY,Marina,CA0271200,52,5,0,0,0,2,71,0,0,130
+331,Calistoga Police Department,CA,NAPA,Calistoga,CA0280100,7,1,0,0,0,0,11,0,0,19
+332,Napa Police Department,CA,NAPA,Napa,CA0280200,173,15,0,1,16,38,161,0,0,404
+333,St. Helena Police Department,CA,NAPA,St. Helena,CA0280300,9,0,0,0,0,2,8,0,0,19
+336,American Canyon Police Department,CA,NAPA,American Canyon,CA0280900,44,2,0,0,1,1,39,0,0,87
+337,Yountville Police Department,CA,NAPA,Yountville,CA0281000,2,0,0,0,0,0,4,0,0,6
+340,Grass Valley Police Department,CA,NEVADA,Grass Valley,CA0290100,65,11,0,2,1,5,136,0,0,220
+341,Nevada City Police Department,CA,NEVADA,Nevada City,CA0290200,12,1,0,1,0,0,7,0,0,21
+343,Truckee Police Department,CA,NEVADA,Truckee,CA0290800,35,3,0,0,1,1,25,0,0,65
+346,Anaheim Police Department,CA,ORANGE,Anaheim,CA0300100,737,113,1,15,23,155,775,0,0,1819
+347,Brea Police Department,CA,ORANGE,Brea,CA0300200,24,7,0,0,0,5,86,0,0,122
+348,Buena Park Police Department,CA,ORANGE,Buena Park,CA0300300,97,21,0,1,4,28,140,0,0,291
+349,Costa Mesa Police Department,CA,ORANGE,Costa Mesa,CA0300400,204,34,0,0,6,45,146,0,0,435
+350,Cypress Police Department,CA,ORANGE,Cypress,CA0300500,48,6,0,1,2,4,29,0,0,90
+351,La Palma Police Department,CA,ORANGE,La Palma,CA0300600,20,3,0,0,0,3,27,0,0,53
+352,Fountain Valley Police Department,CA,ORANGE,Fountain Valley,CA0300700,50,2,0,0,1,10,80,0,0,143
+353,Fullerton Police Department,CA,ORANGE,Fullerton,CA0300800,308,53,2,2,12,43,541,0,0,961
+354,Garden Grove Police Department,CA,ORANGE,Garden Grove,CA0300900,282,43,0,9,18,68,238,0,0,658
+355,Huntington Beach Police Department,CA,ORANGE,Huntington Beach,CA0301000,267,40,1,2,4,53,447,0,0,814
+356,Laguna Beach Police Department,CA,ORANGE,Laguna Beach,CA0301100,64,8,0,1,3,6,127,0,0,209
+357,La Habra Police Department,CA,ORANGE,La Habra,CA0301200,103,25,0,2,4,12,119,0,0,265
+358,Los Alamitos Police Department,CA,ORANGE,Los Alamitos,CA0301300,10,1,0,0,0,0,12,0,0,23
+359,Newport Beach Police Department,CA,ORANGE,Newport Beach,CA0301400,129,13,0,2,1,25,189,0,0,359
+360,Orange Police Department,CA,ORANGE,Orange,CA0301500,188,21,0,1,6,42,240,0,0,498
+361,Placentia Police Department,CA,ORANGE,Placentia,CA0301600,87,6,0,2,1,12,89,0,0,197
+362,San Clemente Police Department,CA,ORANGE,San Clemente,CA0301700,96,12,0,1,2,9,88,0,0,208
+363,San Juan Capistrano Police Department,CA,ORANGE,San Juan Capistrano,CA0301800,59,5,0,0,0,8,45,0,0,117
+364,Santa Ana Police Department,CA,ORANGE,Santa Ana,CA0301900,446,116,0,16,46,122,333,0,0,1079
+365,Seal Beach Police Department,CA,ORANGE,Seal Beach,CA0302000,26,2,0,1,0,6,46,0,0,81
+366,Stanton Police Department,CA,ORANGE,Stanton,CA0302100,63,9,0,2,2,21,46,0,0,143
+367,Tustin Police Department,CA,ORANGE,Tustin,CA0302200,164,19,0,2,8,37,178,0,0,408
+368,Villa Park Police Department,CA,ORANGE,Villa Park,CA0302300,2,0,0,0,0,0,8,0,0,10
+369,Westminster Police Department,CA,ORANGE,Westminster,CA0302400,176,25,1,4,3,38,188,0,0,435
+370,Yorba Linda Police Department,CA,ORANGE,Yorba Linda,CA0302500,22,1,0,0,0,5,29,0,0,57
+371,Irvine Police Department,CA,ORANGE,Irvine,CA0302600,213,16,0,2,4,30,171,0,0,436
+376,Mission Viejo Police Department,CA,ORANGE,Mission Viejo,CA030350X,77,5,0,1,0,6,59,0,0,148
+377,Dana Point Police Department,CA,ORANGE,Dana Point,CA030360X,46,8,0,0,0,10,65,0,0,129
+378,Laguna Niguel Police Department,CA,ORANGE,Laguna Niguel,CA030390X,56,3,0,0,1,6,60,0,0,126
+379,Laguna Hills Police Department,CA,ORANGE,Laguna Hills,CA030420X,41,4,0,0,0,6,33,0,0,84
+380,Lake Forest Police Department,CA,ORANGE,Lake Forest,CA030430X,97,7,0,1,2,6,91,0,0,204
+381,Laguna Woods Police Department,CA,ORANGE,Laguna Woods,CA030470X,3,0,0,0,0,1,3,0,0,7
+382,Rancho Santa Margarita Police Department,CA,ORANGE,Rancho Santa Margarita,CA030480X,36,2,0,0,2,3,28,0,0,71
+383,Aliso Viejo Police Department,CA,ORANGE,Aliso Viejo,CA030490X,44,0,1,0,1,5,34,0,0,85
+388,Auburn Police Department,CA,PLACER,Auburn,CA0310100,40,8,0,0,0,5,33,0,0,86
+389,Lincoln Police Department,CA,PLACER,Lincoln,CA0310300,20,2,0,0,0,1,23,0,0,46
+390,Rocklin Police Department,CA,PLACER,Rocklin,CA0310400,53,9,0,0,3,3,44,0,0,112
+391,Roseville Police Department,CA,PLACER,Roseville,CA0310500,298,15,0,2,6,63,256,0,0,640
+399,Banning Police Department,CA,RIVERSIDE,Banning,CA0330100,60,7,1,3,1,5,40,0,0,117
+400,Beaumont Police Department,CA,RIVERSIDE,Beaumont,CA0330200,44,4,0,0,1,6,57,0,0,112
+401,Blythe Police Department,CA,RIVERSIDE,Blythe,CA0330300,73,1,0,0,2,6,45,0,0,127
+402,Coachella Police Department,CA,RIVERSIDE,Coachella,CA0330500,61,11,1,1,2,16,76,0,0,168
+403,Desert Hot Springs Police Department,CA,RIVERSIDE,Desert Hot Springs,CA0330600,108,9,1,2,1,17,86,0,0,224
+404,Hemet Police Department,CA,RIVERSIDE,Hemet,CA0330800,251,6,3,6,2,33,150,0,0,451
+405,Indio Police Department,CA,RIVERSIDE,Indio,CA0330900,237,19,0,1,5,37,99,0,0,398
+406,Norco Police Department,CA,RIVERSIDE,Norco,CA0331000,32,2,0,0,3,4,32,0,0,73
+407,Palm Springs Police Department,CA,RIVERSIDE,Palm Springs,CA0331100,173,11,0,2,4,15,172,0,0,377
+408,Perris Police Department,CA,RIVERSIDE,Perris,CA0331200,138,5,0,2,5,18,40,0,0,208
+409,Riverside Police Department,CA,RIVERSIDE,Riverside,CA0331300,687,83,0,8,16,93,755,0,0,1642
+410,San Jacinto Police Department,CA,RIVERSIDE,San Jacinto,CA0331400,124,16,0,0,3,5,105,0,0,253
+411,Corona Police Department,CA,RIVERSIDE,Corona,CA0331500,196,25,0,2,14,35,194,0,0,466
+412,Indian Wells Police Department,CA,RIVERSIDE,Indian Wells,CA0331600,6,0,0,0,0,0,6,0,0,12
+413,Rancho Mirage Police Department,CA,RIVERSIDE,Rancho Mirage,CA0331700,30,3,0,0,0,1,18,0,0,52
+414,Palm Desert Police Department,CA,RIVERSIDE,Palm Desert,CA0331800,96,5,0,2,3,6,73,0,0,185
+417,Cathedral City Police Department,CA,RIVERSIDE,Cathedral City,CA0332500,107,14,0,2,0,11,75,0,0,209
+418,Lake Elsinore Police Department,CA,RIVERSIDE,Lake Elsinore,CA033300X,132,8,0,4,5,15,80,0,0,244
+419,La Quinta Police Department,CA,RIVERSIDE,La Quinta,CA033310X,39,6,0,2,4,5,53,0,0,109
+420,Moreno Valley Police Department,CA,RIVERSIDE,Moreno Valley,CA033320X,420,36,1,11,11,75,255,0,0,809
+421,Temecula Police Department,CA,RIVERSIDE,Temecula,CA033380X,107,25,0,1,4,16,137,0,0,290
+422,Calimesa Police Department,CA,RIVERSIDE,Calimesa,CA033400X,9,1,0,0,0,2,11,0,0,23
+423,Canyon Lake Police Department,CA,RIVERSIDE,Canyon Lake,CA033410X,13,0,0,0,0,0,9,0,0,22
+424,Murrieta Police Department,CA,RIVERSIDE,Murrieta,CA0334200,181,10,0,3,4,9,101,0,0,308
+426,Wildomar Police Department,CA,RIVERSIDE,Wildomar,CA033770X,52,4,0,0,2,4,37,0,0,99
+427,Menifee Police Department,CA,RIVERSIDE,Menifee,CA033780X,88,5,0,1,2,12,41,0,0,149
+428,Eastvale Police Department,CA,RIVERSIDE,Eastvale,CA033790X,56,7,0,0,1,4,24,0,0,92
+431,Jurupa Valley Police Department,CA,RIVERSIDE,Jurupa Valley,CA033A000,223,17,0,4,7,18,91,0,0,360
+434,Folsom Police Department,CA,SACRAMENTO,Folsom,CA0340100,88,5,0,0,0,11,86,0,0,190
+435,Galt Police Department,CA,SACRAMENTO,Galt,CA0340200,71,7,0,1,1,5,49,0,0,134
+436,Isleton Police Department,CA,SACRAMENTO,Isleton,CA0340300,0,0,0,0,0,0,0,0,0,0
+437,Sacramento Police Department,CA,SACRAMENTO,Sacramento,CA0340400,1959,203,3,35,19,391,1338,0,0,3948
+439,Elk Grove Police Department,CA,SACRAMENTO,Elk Grove,CA0340H00,219,15,0,0,5,44,192,0,0,475
+446,Rancho Cordova Police Department,CA,SACRAMENTO,Rancho Cordova,CA034550X,171,6,0,1,0,27,105,0,0,310
+447,Citrus Heights Police Department,CA,SACRAMENTO,Citrus Heights,CA0349600,231,12,0,0,1,31,180,0,0,455
+451,Hollister Police Department,CA,SAN BENITO,Hollister,CA0350100,117,12,1,1,4,16,124,0,0,275
+456,Barstow Police Department,CA,SAN BERNARDINO,Barstow,CA0360100,223,16,0,2,0,30,116,0,0,387
+457,Chino Police Department,CA,SAN BERNARDINO,Chino,CA0360200,264,26,1,3,14,70,179,0,0,557
+458,Colton Police Department,CA,SAN BERNARDINO,Colton,CA0360300,91,14,0,1,0,24,88,0,0,218
+459,Fontana Police Department,CA,SAN BERNARDINO,Fontana,CA0360400,513,68,0,6,27,96,449,0,0,1159
+460,Montclair Police Department,CA,SAN BERNARDINO,Montclair,CA0360500,108,20,0,1,6,28,104,0,0,267
+461,Needles Police Department,CA,SAN BERNARDINO,Needles,CA0360600,46,1,0,1,1,3,55,0,0,107
+462,Ontario Police Department,CA,SAN BERNARDINO,Ontario,CA0360700,505,52,0,2,12,88,373,0,0,1032
+463,Redlands Police Department,CA,SAN BERNARDINO,Redlands,CA0360800,136,24,0,0,3,37,200,0,0,400
+464,Rialto Police Department,CA,SAN BERNARDINO,Rialto,CA0360900,313,24,0,3,15,51,275,0,0,681
+465,San Bernardino Police Department,CA,SAN BERNARDINO,San Bernardino,CA0361000,912,53,0,29,13,179,832,0,0,2018
+466,Upland Police Department,CA,SAN BERNARDINO,Upland,CA0361100,157,8,0,5,4,48,176,0,0,398
+467,Victorville Police Department,CA,SAN BERNARDINO,Victorville,CA0361200,468,65,2,1,11,118,402,0,0,1067
+468,Adelanto Police Department,CA,SAN BERNARDINO,Adelanto,CA0361300,95,11,0,1,3,10,137,0,0,257
+470,Rancho Cucamonga Police Department,CA,SAN BERNARDINO,Rancho Cucamonga,CA0361600,285,66,0,2,12,60,378,0,0,803
+471,Big Bear Lake Police Department,CA,SAN BERNARDINO,Big Bear Lake,CA036200X,30,6,0,0,1,3,51,0,0,91
+472,Grand Terrace Police Department,CA,SAN BERNARDINO,Grand Terrace,CA036210X,17,4,0,0,1,2,40,0,0,64
+473,Loma Linda Police Department,CA,SAN BERNARDINO,Loma Linda,CA036220X,31,6,1,0,0,5,52,0,0,95
+476,Highland Police Department,CA,SAN BERNARDINO,Highland,CA036300X,172,20,0,0,10,27,158,0,0,387
+477,Twentynine Palms Police Department,CA,SAN BERNARDINO,Twentynine Palms,CA036310X,79,8,1,0,2,6,56,0,0,152
+478,Hesperia Police Department,CA,SAN BERNARDINO,Hesperia,CA036320X,217,18,2,1,6,35,198,0,0,477
+479,Apple Valley Police Department,CA,SAN BERNARDINO,Apple Valley,CA036330X,222,38,0,1,7,36,149,0,0,453
+480,Yucaipa Police Department,CA,SAN BERNARDINO,Yucaipa,CA036350X,121,20,0,3,2,16,95,0,0,257
+482,Chino Hills Police Department,CA,SAN BERNARDINO,Chino Hills,CA036400X,55,6,1,0,4,10,79,0,0,155
+483,Yucca Valley Police Department,CA,SAN BERNARDINO,Yucca Valley,CA036410X,103,6,0,0,1,14,56,0,0,180
+490,Carlsbad Police Department,CA,SAN DIEGO,Carlsbad,CA0370100,137,14,0,5,1,21,113,0,0,291
+491,Chula Vista Police Department,CA,SAN DIEGO,Chula Vista,CA0370200,528,21,0,3,7,110,392,0,0,1061
+492,Coronado Police Department,CA,SAN DIEGO,Coronado,CA0370300,24,1,0,0,2,3,22,0,0,52
+493,Del Mar Police Department,CA,SAN DIEGO,Del Mar,CA0370400,8,2,0,0,0,0,13,0,0,23
+494,El Cajon Police Department,CA,SAN DIEGO,El Cajon,CA0370500,340,16,0,2,0,65,194,0,0,617
+495,Escondido Police Department,CA,SAN DIEGO,Escondido,CA0370600,425,44,1,12,1,75,316,0,0,874
+496,Imperial Beach Police Department,CA,SAN DIEGO,Imperial Beach,CA0370700,93,4,0,0,1,8,64,0,0,170
+497,La Mesa Police Department,CA,SAN DIEGO,La Mesa,CA0370800,133,11,0,2,2,44,149,0,0,341
+498,National City Police Department,CA,SAN DIEGO,National City,CA0370900,223,8,0,0,8,60,103,0,0,402
+499,Oceanside Police Department,CA,SAN DIEGO,Oceanside,CA0371000,487,50,2,4,8,66,359,0,0,976
+500,San Diego Police Department,CA,SAN DIEGO,San Diego,CA0371100,2446,221,1,18,60,422,2702,0,0,5870
+501,San Marcos Police Department,CA,SAN DIEGO,San Marcos,CA0371200,170,3,0,0,2,34,147,0,0,356
+502,Vista Police Department,CA,SAN DIEGO,Vista,CA0371300,379,11,0,1,0,35,198,0,0,624
+511,Lemon Grove Police Department,CA,SAN DIEGO,Lemon Grove,CA037A100,119,4,0,0,0,16,86,0,0,225
+512,Santee Police Department,CA,SAN DIEGO,Santee,CA037A200,127,10,0,0,1,18,144,0,0,300
+513,Poway Police Department,CA,SAN DIEGO,Poway,CA037A300,45,3,0,3,1,3,50,0,0,105
+514,Encinitas Police Department,CA,SAN DIEGO,Encinitas,CA037A400,101,4,0,0,0,5,57,0,0,167
+515,Solana Beach Police Department,CA,SAN DIEGO,Solana Beach,CA037A500,23,2,0,0,0,3,12,0,0,40
+517,San Francisco Police Department,CA,SAN FRANCISCO,San Francisco,CA0380100,1498,77,6,34,27,348,1534,0,0,3524
+524,Escalon Police Department,CA,SAN JOAQUIN,Escalon,CA0390100,12,2,0,0,0,0,21,0,0,35
+525,Lodi Police Department,CA,SAN JOAQUIN,Lodi,CA0390200,199,21,0,4,7,36,227,0,0,494
+526,Manteca Police Department,CA,SAN JOAQUIN,Manteca,CA0390300,147,15,0,4,6,30,157,0,0,359
+527,Ripon Police Department,CA,SAN JOAQUIN,Ripon,CA0390400,17,1,0,0,2,4,40,0,0,64
+528,Stockton Police Department,CA,SAN JOAQUIN,Stockton,CA0390500,1235,100,1,13,26,283,852,0,0,2510
+529,Tracy Police Department,CA,SAN JOAQUIN,Tracy,CA0390600,154,12,0,3,4,13,186,0,0,372
+534,Arroyo Grande Police Department,CA,SAN LUIS OBISPO,Arroyo Grande,CA0400100,39,5,0,0,0,7,22,0,0,73
+535,Grover Beach Police Department,CA,SAN LUIS OBISPO,Grover Beach,CA0400200,15,1,0,0,0,4,15,0,0,35
+536,Morro Bay Police Department,CA,SAN LUIS OBISPO,Morro Bay,CA0400300,23,0,0,0,0,1,30,0,0,54
+537,Paso Robles Police Department,CA,SAN LUIS OBISPO,Paso Robles,CA0400400,81,5,0,0,6,4,73,0,0,169
+538,Pismo Beach Police Department,CA,SAN LUIS OBISPO,Pismo Beach,CA0400500,16,1,0,0,1,3,29,0,0,50
+539,San Luis Obispo Police Department,CA,SAN LUIS OBISPO,San Luis Obispo,CA0400600,91,13,0,0,4,9,130,0,0,247
+541,Atascadero Police Department,CA,SAN LUIS OBISPO,Atascadero,CA0400800,41,4,0,0,1,6,47,0,0,99
+549,Atherton Police Department,CA,SAN MATEO,Atherton,CA0410100,1,0,0,0,0,2,1,0,0,4
+550,Belmont Police Department,CA,SAN MATEO,Belmont,CA0410200,15,2,0,0,1,2,16,0,0,36
+551,Brisbane Police Department,CA,SAN MATEO,Brisbane,CA0410300,5,0,0,0,0,0,15,0,0,20
+552,Burlingame Police Department,CA,SAN MATEO,Burlingame,CA0410400,43,1,0,0,2,11,54,0,0,111
+553,Colma Police Department,CA,SAN MATEO,Colma,CA0410500,9,0,0,0,0,8,25,0,0,42
+554,Daly City Police Department,CA,SAN MATEO,Daly City,CA0410600,257,35,0,0,9,49,193,0,0,543
+555,Hillsborough Police Department,CA,SAN MATEO,Hillsborough,CA0410800,1,0,0,0,0,0,7,0,0,8
+556,Menlo Park Police Department,CA,SAN MATEO,Menlo Park,CA0410900,27,6,0,2,1,7,44,0,0,87
+557,Pacifica Police Department,CA,SAN MATEO,Pacifica,CA0411100,52,1,0,0,0,1,61,0,0,115
+558,Redwood City Police Department,CA,SAN MATEO,Redwood City,CA0411300,141,13,0,0,2,23,117,0,0,296
+559,San Bruno Police Department,CA,SAN MATEO,San Bruno,CA0411400,92,6,0,0,9,20,109,0,0,236
+560,San Mateo Police Department,CA,SAN MATEO,San Mateo,CA0411600,125,14,0,1,4,33,179,0,0,356
+561,South San Francisco Police Department,CA,SAN MATEO,South San Francisco,CA0411700,144,8,0,2,3,30,68,0,0,255
+562,Broadmoor Police Department,CA,SAN MATEO,Broadmoor,CA0411900,4,0,0,0,0,2,4,0,0,10
+563,Foster City Police Department,CA,SAN MATEO,Foster City,CA0412000,33,4,0,0,0,2,23,0,0,62
+567,East Palo Alto Police Department,CA,SAN MATEO,East Palo Alto,CA0412700,79,8,0,0,1,14,56,0,0,158
+570,Guadalupe Police Department,CA,SANTA BARBARA,Guadalupe,CA0420100,13,1,0,0,1,0,30,0,0,45
+571,Lompoc Police Department,CA,SANTA BARBARA,Lompoc,CA0420200,127,4,0,3,0,8,145,0,0,287
+572,Santa Barbara Police Department,CA,SANTA BARBARA,Santa Barbara,CA0420300,315,46,0,4,12,54,348,0,0,779
+573,Santa Maria Police Department,CA,SANTA BARBARA,Santa Maria,CA0420400,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+574,Carpinteria Police Department,CA,SANTA BARBARA,Carpinteria,CA0420500,26,3,0,0,0,2,30,0,0,61
+576,Solvang Police Department,CA,SANTA BARBARA,Solvang,CA0421000,16,1,0,0,0,0,9,0,0,26
+578,Buellton Police Department,CA,SANTA BARBARA,Buellton,CA0421200,17,0,0,0,0,1,6,0,0,24
+579,Goleta Police Department,CA,SANTA BARBARA,Goleta,CA042140X,65,4,0,0,0,6,69,0,0,144
+583,Campbell Police Department,CA,SANTA CLARA,Campbell,CA0430200,97,9,0,0,3,15,57,0,0,181
+584,Cupertino Police Department,CA,SANTA CLARA,Cupertino,CA0430300,9,12,0,0,0,1,21,0,0,43
+585,Gilroy Police Department,CA,SANTA CLARA,Gilroy,CA0430400,159,35,0,1,6,39,195,0,0,435
+586,Los Altos Police Department,CA,SANTA CLARA,Los Altos,CA0430500,16,1,1,0,1,2,10,0,0,31
+587,Los Altos Hills Police Department,CA,SANTA CLARA,Los Altos Hills,CA0430600,1,0,0,0,0,0,0,0,0,1
+588,Los Gatos Police Department,CA,SANTA CLARA,Los Gatos,CA0430700,32,5,0,0,1,5,43,0,0,86
+589,Milpitas Police Department,CA,SANTA CLARA,Milpitas,CA0430800,114,18,0,1,4,22,147,0,0,306
+590,Monte Sereno Police Department,CA,SANTA CLARA,Monte Sereno,CA0430900,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+591,Morgan Hill Police Department,CA,SANTA CLARA,Morgan Hill,CA0431000,57,12,0,0,5,6,135,0,0,215
+592,Mountain View Police Department,CA,SANTA CLARA,Mountain View,CA0431100,110,26,1,0,10,22,130,0,0,299
+593,Palo Alto Police Department,CA,SANTA CLARA,Palo Alto,CA0431200,51,15,0,1,3,12,83,0,0,165
+594,San Jose Police Department,CA,SANTA CLARA,San Jose,CA0431300,2024,241,7,41,76,434,1299,0,0,4122
+595,Santa Clara Police Department,CA,SANTA CLARA,Santa Clara,CA0431400,187,39,0,1,11,29,239,0,0,506
+596,Saratoga Police Department,CA,SANTA CLARA,Saratoga,CA0431500,7,0,0,0,0,1,7,0,0,15
+597,Sunnyvale Police Department,CA,SANTA CLARA,Sunnyvale,CA0431600,199,32,1,0,10,40,190,0,0,472
+606,Capitola Police Department,CA,SANTA CRUZ,Capitola,CA0440100,22,8,0,0,1,1,33,0,0,65
+607,Santa Cruz Police Department,CA,SANTA CRUZ,Santa Cruz,CA0440200,174,19,0,2,3,32,345,0,0,575
+608,Watsonville Police Department,CA,SANTA CRUZ,Watsonville,CA0440300,127,16,0,0,3,18,208,0,0,372
+609,Scotts Valley Police Department,CA,SANTA CRUZ,Scotts Valley,CA0440400,7,2,0,0,0,0,31,0,0,40
+615,Anderson Police Department,CA,SHASTA,Anderson,CA0450100,35,2,0,1,3,6,49,0,0,96
+616,Redding Police Department,CA,SHASTA,Redding,CA0450200,431,41,0,5,8,72,373,0,0,930
+624,Dorris Police Department,CA,SISKIYOU,Dorris,CA0470100,0,0,0,0,0,0,1,0,0,1
+625,Dunsmuir Police Department,CA,SISKIYOU,Dunsmuir,CA0470200,0,0,0,0,0,0,1,0,0,1
+626,Etna Police Department,CA,SISKIYOU,Etna,CA0470300,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+627,Fort Jones Police Department,CA,SISKIYOU,Fort Jones,CA0470400,1,0,0,0,0,0,1,0,0,2
+628,Montague Police Department,CA,SISKIYOU,Montague,CA0470500,0,0,0,0,0,0,1,0,0,1
+629,Mount Shasta Police Department,CA,SISKIYOU,Mount Shasta,CA0470600,9,1,0,1,0,0,16,0,0,27
+630,Tulelake Police Department,CA,SISKIYOU,Tulelake,CA0470700,0,0,0,0,0,0,0,0,0,0
+631,Weed Police Department,CA,SISKIYOU,Weed,CA0470800,9,1,0,0,2,1,25,0,0,38
+632,Yreka Police Department,CA,SISKIYOU,Yreka,CA0470900,27,2,0,0,0,1,52,0,0,82
+633,Lake Shastina Police Department,CA,SISKIYOU,Lake Shastina,CA0471000,4,0,0,0,0,0,2,0,0,6
+637,Benicia Police Department,CA,SOLANO,Benicia,CA0480100,21,5,0,0,0,5,73,0,0,104
+638,Dixon Police Department,CA,SOLANO,Dixon,CA0480200,36,4,0,0,2,4,29,0,0,75
+639,Fairfield Police Department,CA,SOLANO,Fairfield,CA0480300,373,30,1,4,4,74,516,0,0,1002
+640,Rio Vista Police Department,CA,SOLANO,Rio Vista,CA0480400,19,0,0,0,0,3,18,0,0,40
+641,Suisun City Police Department,CA,SOLANO,Suisun City,CA0480500,67,6,0,0,1,6,70,0,0,150
+642,Vacaville Police Department,CA,SOLANO,Vacaville,CA0480600,200,26,0,3,2,60,227,0,0,518
+643,Vallejo Police Department,CA,SOLANO,Vallejo,CA0480700,229,21,1,7,5,52,245,0,0,560
+647,Cloverdale Police Department,CA,SONOMA,Cloverdale,CA0490100,22,2,0,0,0,0,14,0,0,38
+648,Cotati Police Department,CA,SONOMA,Cotati,CA0490200,19,0,0,1,0,1,39,0,0,60
+649,Healdsburg Police Department,CA,SONOMA,Healdsburg,CA0490300,15,4,0,3,0,2,29,0,0,53
+650,Rohnert Park Police Department,CA,SONOMA,Rohnert Park,CA0490400,173,11,0,0,5,13,160,0,0,362
+651,Santa Rosa Police Department,CA,SONOMA,Santa Rosa,CA0490500,561,58,2,3,14,69,455,0,0,1162
+652,Sebastopol Police Department,CA,SONOMA,Sebastopol,CA0490600,21,4,0,0,2,4,49,0,0,80
+653,Sonoma Police Department,CA,SONOMA,Sonoma,CA0490700,26,5,0,0,0,1,38,0,0,70
+654,Petaluma Police Department,CA,SONOMA,Petaluma,CA0490800,105,11,0,0,3,13,134,0,0,266
+660,Windsor Police Department,CA,SONOMA,Windsor,CA049150X,41,5,0,0,2,3,61,0,0,112
+663,Ceres Police Department,CA,STANISLAUS,Ceres,CA0500100,140,13,0,2,2,26,117,0,0,300
+664,Modesto Police Department,CA,STANISLAUS,Modesto,CA0500200,848,60,1,15,22,137,788,0,0,1871
+665,Newman Police Department,CA,STANISLAUS,Newman,CA0500300,24,3,0,0,0,3,19,0,0,49
+666,Oakdale Police Department,CA,STANISLAUS,Oakdale,CA0500400,64,4,0,1,0,4,77,0,0,150
+667,Patterson Police Department,CA,STANISLAUS,Patterson,CA0500500,80,15,0,0,2,7,72,0,0,176
+668,Riverbank Police Department,CA,STANISLAUS,Riverbank,CA0500600,63,3,2,1,2,4,47,0,0,122
+669,Turlock Police Department,CA,STANISLAUS,Turlock,CA0500700,222,29,0,2,11,46,256,0,0,566
+670,Waterford Police Department,CA,STANISLAUS,Waterford,CA0500800,30,1,0,1,2,5,23,0,0,62
+671,Hughson Police Department,CA,STANISLAUS,Hughson,CA0500900,17,1,0,0,1,2,12,0,0,33
+676,Yuba City Police Department,CA,SUTTER,Yuba City,CA0510200,250,16,0,2,6,25,232,0,0,531
+680,Corning Police Department,CA,TEHAMA,Corning,CA0520100,12,5,0,0,0,4,46,0,0,67
+681,Red Bluff Police Department,CA,TEHAMA,Red Bluff,CA0520200,82,19,0,1,0,6,148,0,0,256
+688,Dinuba Police Department,CA,TULARE,Dinuba,CA0540100,103,12,0,1,2,17,126,0,0,261
+689,Exeter Police Department,CA,TULARE,Exeter,CA0540200,53,5,0,0,1,1,32,0,0,92
+690,Farmersville Police Department,CA,TULARE,Farmersville,CA0540300,45,1,0,0,1,3,26,0,0,76
+691,Lindsay Police Department,CA,TULARE,Lindsay,CA0540400,29,4,0,0,1,12,40,0,0,86
+692,Porterville Police Department,CA,TULARE,Porterville,CA0540500,300,32,0,4,8,26,229,0,0,599
+693,Tulare Police Department,CA,TULARE,Tulare,CA0540600,292,20,0,13,9,40,351,0,0,725
+694,Visalia Police Department,CA,TULARE,Visalia,CA0540700,441,27,0,5,13,56,335,0,0,877
+695,Woodlake Police Department,CA,TULARE,Woodlake,CA0540800,45,5,0,0,2,5,24,0,0,81
+700,Sonora Police Department,CA,TUOLUMNE,Sonora,CA0550100,39,3,0,0,0,4,58,0,0,104
+703,Camarillo Police Department,CA,VENTURA,Camarillo,CA0560100,115,11,0,0,0,12,179,0,0,317
+704,Fillmore Police Department,CA,VENTURA,Fillmore,CA0560200,64,8,1,0,0,5,80,0,0,158
+705,Ojai Police Department,CA,VENTURA,Ojai,CA0560300,26,0,0,0,2,0,29,0,0,57
+706,Oxnard Police Department,CA,VENTURA,Oxnard,CA0560400,417,52,0,12,3,82,708,0,0,1274
+707,Port Hueneme Police Department,CA,VENTURA,Port Hueneme,CA0560500,24,9,0,0,1,4,60,0,0,98
+708,Santa Paula Police Department,CA,VENTURA,Santa Paula,CA0560600,80,4,1,3,0,10,141,0,0,239
+709,Thousand Oaks Police Department,CA,VENTURA,Thousand Oaks,CA0560700,187,20,1,0,3,18,194,0,0,423
+710,Ventura Police Department,CA,VENTURA,Ventura,CA0560800,338,40,0,1,9,58,473,0,0,919
+711,Simi Valley Police Department,CA,VENTURA,Simi Valley,CA0560900,112,16,0,1,2,26,190,0,0,347
+713,Moorpark Police Department,CA,VENTURA,Moorpark,CA056140X,58,3,0,0,0,6,59,0,0,126
+721,Davis Police Department,CA,YOLO,Davis,CA0570100,56,5,0,0,0,12,32,0,0,105
+722,Winters Police Department,CA,YOLO,Winters,CA0570200,18,0,0,0,1,0,14,0,0,33
+723,Woodland Police Department,CA,YOLO,Woodland,CA0570300,139,15,1,1,4,16,160,0,0,336
+724,West Sacramento Police Department,CA,YOLO,West Sacramento,CA0570400,173,11,1,1,3,37,132,0,0,358
+729,Marysville Police Department,CA,YUBA,Marysville,CA0580100,75,6,0,2,3,6,68,0,0,160
+730,Wheatland Police Department,CA,YUBA,Wheatland,CA0580200,11,1,0,0,0,0,10,0,0,22
