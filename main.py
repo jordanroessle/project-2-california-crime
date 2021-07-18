@@ -102,7 +102,6 @@ ori_df = pd.DataFrame({"Department_Name": department_name,
                         "Ori": ori,
                         })
 
-
 print(' Complete\nStep 3: Obtaining and cleaning Crime data...', end='')
 
 # Obtaining Crime Data
@@ -180,6 +179,7 @@ sqlite_connection = engine.connect()
 census_df.to_sql('countyDemographics', sqlite_connection, if_exists='replace')
 
 # Load ca_crimes_df into DB
+
 ca_crimes_df.to_sql('crimesByDepartment', sqlite_connection, if_exists='replace')
 
 # Close connection
