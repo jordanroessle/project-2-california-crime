@@ -172,7 +172,7 @@ print(' Complete\nStep 4: Adding cleaned DataFrames to SQLite database...', end=
 
 # Connect to local database
 
-engine = create_engine('sqlite:///static/data/ca_crime.db')
+engine = create_engine('sqlite:///static/data/ca_crime.sqlite')
 sqlite_connection = engine.connect()
 
 # Load census_df into DB
