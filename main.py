@@ -6,7 +6,7 @@ import json
 from sqlalchemy import create_engine
 
 #import API keys
-from config import api_key1, api_key2, user, password
+from config import api_key1, api_key2
 
 # Obtaining Census data
 print('Step 1: Obtaining and cleaning Census data from API...', end='')
@@ -73,7 +73,7 @@ census_df = census_df[['Population', 'Income_median', 'Income_per_capita', '%_Po
 # Convert to CSV
 census_df.to_csv('static/data/census_data.csv')
 
-print(' Complete/nStep 2: Obtaining and cleaning ORI data...', end='')
+print(' Complete\nStep 2: Obtaining and cleaning ORI data...', end='')
 
 # Obtaining ORI Data
 
@@ -102,8 +102,7 @@ ori_df = pd.DataFrame({"Department_Name": department_name,
                         "Ori": ori,
                         })
 
-
-print(' Complete/nStep 3: Obtaining and cleaning Crime data...', end='')
+print(' Complete\nStep 3: Obtaining and cleaning Crime data...', end='')
 
 # Obtaining Crime Data
 
@@ -169,19 +168,22 @@ ca_crimes_df = pd.merge(ori_df, crimes_df, how='right', on='Ori')
 # Convert to CSV
 ca_crimes_df.to_csv('static/data/CA_Crime.csv')
 
-print(' Complete/nStep 4: Adding cleaned DataFrames to Postgres database...', end='')
+print(' Complete\nStep 4: Adding cleaned DataFrames to SQLite database...', end='')
 
 # Connect to local database
 
-conn_string = f'postgresql://{user}:{password}@localhost:5432/california_crime_db'
-
-engine = create_engine(conn_string)
+engine = create_engine('sqlite:///static/data/ca_crime.db')
+sqlite_connection = engine.connect()
 
 # Load census_df into DB
-census_df.to_sql(name='county_demographics', con=engine, if_exists='replace')
+census_df.to_sql('countyDemographics', sqlite_connection, if_exists='replace')
 
 # Load ca_crimes_df into DB
-ca_crimes_df.to_sql(name='crimes_by_department', con=engine, if_exists='replace')
+
+ca_crimes_df.to_sql('crimesByDepartment', sqlite_connection, if_exists='replace')
+
+# Close connection
+sqlite_connection.close()
 
 # Print to terminal
 print(' Complete')
