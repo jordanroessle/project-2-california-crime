@@ -73,10 +73,9 @@ census_df = census_df[['Population', 'Income_median', 'Income_per_capita', '%_Po
 # Convert to CSV
 census_df.to_csv('static/data/census_data.csv')
 
-print(' Complete')
+print(' Complete/nStep 2: Obtaining and cleaning ORI data...', end='')
 
 # Obtaining ORI Data
-print('Step 2: Obtaining and cleaning ORI data...', end='')
 
 url = "https://api.usa.gov/crime/fbi/sapi/"
 
@@ -104,10 +103,9 @@ ori_df = pd.DataFrame({"Department_Name": department_name,
                         })
 
 
-print(' Complete')
+print(' Complete/nStep 3: Obtaining and cleaning Crime data...', end='')
 
 # Obtaining Crime Data
-print('Step 3: Obtaining and cleaning Crime data...', end='')
 
 crime_data = []
 
@@ -171,10 +169,9 @@ ca_crimes_df = pd.merge(ori_df, crimes_df, how='right', on='Ori')
 # Convert to CSV
 ca_crimes_df.to_csv('static/data/CA_Crime.csv')
 
-print(' Complete')
+print(' Complete/nStep 4: Adding cleaned DataFrames to Postgres database...', end='')
 
 # Connect to local database
-print('Step 4: Adding cleaned DataFrames to Postgres database...', end='')
 
 conn_string = f'postgresql://{user}:{password}@localhost:5432/california_crime_db'
 
@@ -184,7 +181,7 @@ engine = create_engine(conn_string)
 census_df.to_sql(name='county_demographics', con=engine, if_exists='replace')
 
 # Load ca_crimes_df into DB
-census_df.to_sql(name='crimes_by_department', con=engine, if_exists='replace')
+ca_crimes_df.to_sql(name='crimes_by_department', con=engine, if_exists='replace')
 
 # Print to terminal
 print(' Complete')
