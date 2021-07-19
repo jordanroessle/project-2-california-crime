@@ -1,89 +1,86 @@
-function init() {
-    var queryUrl = "../static/data/CA_Counties.geojson"
+var californiaCenter = [36.78, -119.42];
+var baseZoom = 6;
+var queryUrl = "../static/data/CA_Counties.geojson";
 
-    d3.json(queryUrl).then(function(data) {
-        createMap(data.features);
-    });
+// define layers
+var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    tileSize: 512,
+    maxZoom: 18,
+    zoomOffset: -1,
+    id: "satellite-v9",
+    accessToken: API_KEY
+});
 
-    function createFeatures(countyData, myMap) {
-        function onEachFeature(feature, layer) {
-            layer.on({
-                click: function(event) {
-                myMap.fitBounds(event.target.getBounds());
-                }
-            })
-            
-            layer.bindPopup("<h3>" + feature.properties.COUNTY_NAME + "</h3>")
-        }
+var darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    maxZoom: 18,
+    id: "dark-v10",
+    accessToken: API_KEY
+});
 
-        var countyLines = L.geoJSON(countyData, {
-            onEachFeature: onEachFeature
-        });
-        return countyLines;
-    }
+var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    maxZoom: 18,
+    id: "light-v10",
+    accessToken: API_KEY
+});
 
-    function createMap(features) {
+var outdoormap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    maxZoom: 18,
+    id: "outdoors-v11",
+    accessToken: API_KEY
+});
 
-        // define layers
-        var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-            tileSize: 512,
-            maxZoom: 18,
-            zoomOffset: -1,
-            id: "satellite-v9",
-            accessToken: API_KEY
-        });
+// define basemap object to hold base layers
+var baseMaps = { 
+    "Outdoor Map": outdoormap,
+    "Satellite Map": satellitemap,
+    "Dark Map": darkmap,  
+    "Light Map": lightmap,
+};
 
-        var darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-            maxZoom: 18,
-            id: "dark-v10",
-            accessToken: API_KEY
-        });
+// declare countyLines so that we can create the map before giving features to counties
+var countyLines =  new L.LayerGroup()
 
-        var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-            maxZoom: 18,
-            id: "light-v10",
-            accessToken: API_KEY
-        });
+// define overlay maps
+var overlayMaps = {
+    "County Lines": countyLines
+};
 
-        var outdoormap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-            maxZoom: 18,
-            id: "outdoors-v11",
-            accessToken: API_KEY
-        });
+// create map, center on US
+var myMap = L.map("map", {
+    center: californiaCenter,
+    zoom: baseZoom, 
+    layers: [outdoormap, countyLines]
+});
 
-        // define basemap object to hold base layers
-        var baseMaps = { 
-            "Outdoor Map": outdoormap,
-            "Satellite Map": satellitemap,
-            "Dark Map": darkmap,  
-            "Light Map": lightmap,
-        };
+d3.json(queryUrl).then(function(data) {
+    // give countyLines features
+    createFeatures(data.features, myMap).addTo(countyLines);
+});
 
-        // declare countyLines so that we can create the map before giving features to counties
-        var countyLines =  new L.LayerGroup()
+// Create layer control
+L.control.layers(baseMaps, overlayMaps, {
+    collapsed: false
+}).addTo(myMap);
 
-        // define overlay maps
-        var overlayMaps = {
-            "County Lines": countyLines
-        };
 
-        var californiaCenter = [36.78, -119.42];
-        // create map, center on US
-        var myMap = L.map("map", {
-            center: californiaCenter,
-            zoom: 6, 
-            layers: [outdoormap, countyLines]
-        });
-
-        // give countyLines features
-        createFeatures(features, myMap).addTo(countyLines);
+function createFeatures(countyData, myMap) {
+    function onEachFeature(feature, layer) {
+        layer.on({
+            click: function(event) {
+            myMap.fitBounds(event.target.getBounds());
+            }
+        })
         
-        // Create layer control
-        L.control.layers(baseMaps, overlayMaps, {
-            collapsed: false
-        }).addTo(myMap);
+        layer.bindPopup("<h3>" + feature.properties.COUNTY_NAME + "</h3>")
     }
+
+    var countyLines = L.geoJSON(countyData, {
+        onEachFeature: onEachFeature
+    });
+    return countyLines;
 }
+
+
 
 function dropDownOptions() {
     file_path = "../static/data/CA_County_Crime.csv"
@@ -95,5 +92,9 @@ function dropDownOptions() {
     });
 }
 
-init();
+function recenterMap() {
+    myMap.flyTo(californiaCenter, baseZoom);
+    myMap.closePopup();
+}
+
 dropDownOptions();
