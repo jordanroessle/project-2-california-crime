@@ -80,8 +80,6 @@ function createFeatures(countyData, myMap) {
     return countyLines;
 }
 
-
-
 function dropDownOptions() {
     file_path = "../static/data/CA_County_Crime.csv"
     
@@ -95,6 +93,17 @@ function dropDownOptions() {
 function recenterMap() {
     myMap.flyTo(californiaCenter, baseZoom);
     myMap.closePopup();
+}
+
+function dropDownChanged(chosenCounty) {
+    if(chosenCounty === "All") {
+        recenterMap();
+    }
+    else {
+        d3.json(queryUrl).then(function(data) {
+            
+        })
+    }
 }
 
 dropDownOptions();
