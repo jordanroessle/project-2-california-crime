@@ -53,6 +53,8 @@ var myMap = L.map("map", {
 });
 
 d3.json(queryUrl).then(function(data) {
+    // give dropdown options
+    dropDownOptions(data.features);
     // give countyLines features
     createFeatures(data.features, myMap).addTo(countyLines);
 });
@@ -67,7 +69,8 @@ function createFeatures(countyData, myMap) {
     function onEachFeature(feature, layer) {
         layer.on({
             click: function(event) {
-            myMap.fitBounds(event.target.getBounds());
+                myMap.fitBounds(event.target.getBounds());
+                updateDropDown(event.target.feature.properties.COUNTY_NAME);
             }
         })
         
@@ -80,14 +83,15 @@ function createFeatures(countyData, myMap) {
     return countyLines;
 }
 
-function dropDownOptions() {
-    file_path = "../static/data/CA_County_Crime.csv"
-    
-    d3.csv(file_path).then(function (data) {
-        data.forEach(function(county) {
-            d3.select("#Counties").append("option").text(`${county.County}`)
-        });
-    });
+function dropDownOptions(data) {
+        
+        d3.select("#Counties")
+            .selectAll("inserted-option")
+            .data(data)
+            .enter()
+            .append("option")
+            .text(d => d.properties.COUNTY_NAME);
+        
 }
 
 function recenterMap() {
@@ -100,10 +104,26 @@ function dropDownChanged(chosenCounty) {
         recenterMap();
     }
     else {
-        d3.json(queryUrl).then(function(data) {
-            
-        })
+        var layerKeys = Object.keys(myMap._layers);
+        layerKeys.forEach(key => {
+            if(("key" in myMap)) {
+                if(myMap._layers[key].feature.properties.COUNTY_NAME === chosenCounty) {
+                    myMap.fitBounds(myMap._layers[key].getBounds());
+                    myMap._layers[key].openPopup();
+                }
+            }
+        });
     }
 }
 
-dropDownOptions();
+function updateDropDown(chosenCounty) {
+    console.log(chosenCounty)
+    var options = d3.select("#Counties").selectAll("inserted-option").nodes();
+    options.forEach(option => {
+        if(option.__data__.properties.COUNTY_NAME === chosenCounty) {
+            option.selected = true;
+            return;
+        }
+    })
+    
+}
