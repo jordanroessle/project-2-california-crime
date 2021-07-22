@@ -69,7 +69,7 @@ function createFeatures(countyData, myMap) {
     function onEachFeature(feature, layer) {
         layer.on({
             click: function(event) {
-                myMap.fitBounds(event.target.getBounds());
+                myMap.flyToBounds(event.target.getBounds());
                 updateDropDown(event.target.feature.properties.COUNTY_NAME);
                 d3.select(".header").text(event.target.feature.properties.COUNTY_NAME + " County");
             }
@@ -108,7 +108,7 @@ function dropDownChanged(chosenCounty) {
         layerKeys.forEach(key => {
             if(myMap._layers[key].feature) {
                 if(myMap._layers[key].feature.properties.COUNTY_NAME === chosenCounty) {
-                    myMap.fitBounds(myMap._layers[key].getBounds());
+                    myMap.flyToBounds(myMap._layers[key].getBounds());
                     myMap._layers[key].openPopup();
                 }
             }
