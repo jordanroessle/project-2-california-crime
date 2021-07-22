@@ -71,12 +71,11 @@ function createFeatures(countyData, myMap) {
             click: function(event) {
                 myMap.fitBounds(event.target.getBounds());
                 updateDropDown(event.target.feature.properties.COUNTY_NAME);
+                d3.select(".header").text(event.target.feature.properties.COUNTY_NAME + " County");
             }
         })
-        
         layer.bindPopup("<h3>" + feature.properties.COUNTY_NAME + "</h3>")
     }
-
     var countyLines = L.geoJSON(countyData, {
         onEachFeature: onEachFeature
     });
@@ -84,19 +83,18 @@ function createFeatures(countyData, myMap) {
 }
 
 function dropDownOptions(data) {
-        
         d3.select("#Counties")
             .selectAll("inserted-option")
             .data(data)
             .enter()
             .append("option")
-            .text(d => d.properties.COUNTY_NAME);
-        
+            .text(d => d.properties.COUNTY_NAME);       
 }
 
 function recenterMap() {
     myMap.flyTo(californiaCenter, baseZoom);
     myMap.closePopup();
+    d3.select(".header").text("Please select a County");
 }
 
 function dropDownChanged(chosenCounty) {
@@ -104,9 +102,11 @@ function dropDownChanged(chosenCounty) {
         recenterMap();
     }
     else {
+        d3.select(".header").text(chosenCounty + " County");
         var layerKeys = Object.keys(myMap._layers);
+        layerKeys.pop();
         layerKeys.forEach(key => {
-            if(("key" in myMap)) {
+            if(myMap._layers[key].feature) {
                 if(myMap._layers[key].feature.properties.COUNTY_NAME === chosenCounty) {
                     myMap.fitBounds(myMap._layers[key].getBounds());
                     myMap._layers[key].openPopup();
@@ -117,13 +117,12 @@ function dropDownChanged(chosenCounty) {
 }
 
 function updateDropDown(chosenCounty) {
-    console.log(chosenCounty)
-    var options = d3.select("#Counties").selectAll("inserted-option").nodes();
+    var options = d3.select("#Counties").selectAll("option").nodes();
+    // pop "All" selection
+    options.shift();
     options.forEach(option => {
         if(option.__data__.properties.COUNTY_NAME === chosenCounty) {
             option.selected = true;
-            return;
         }
     })
-    
 }
