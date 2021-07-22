@@ -1,7 +1,7 @@
 /* for now we can just select a specific county, 
     for testing purposes change this variable and see if your graphs change */
 
-var selectedCounty = "LOS ANGELES";
+var selectedCounty = "VENTURA";
 
 /*  read data, for now we can use the csv files
     make sure to put the path to the data you want to show 
@@ -16,21 +16,12 @@ Promise.all([
     // filter the data based on the selectedCounty variable
     var filtered_data = data[0].filter(filterData);
     var census_data = data[1].filter(filterData);
-    console.log(filtered_data);
-    console.log(census_data);
 
-    filtered_data.Agg_Assult = +filtered_data.Agg_Assult;
-    filtered_data.Sex_Offences = +filtered_data.Sex_Offences;
-    filtered_data.Manslaughter_Neg = +filtered_data.Manslaughter_Neg;
-    filtered_data.Murder_and_Nonneg_Man = +filtered_data.Murder_and_Nonneg_Man;
-    filtered_data.Rape = +filtered_data.Rape;
-    filtered_data.Robbery = +filtered_data.Robbery;
-    filtered_data.Simp_Assult = +filtered_data.Simp_Assult;
-    
+    graphFourTable(data);
+
     census_data.Population = +census_data.Population
     population = census_data[0].Population
-    console.log(population);
-
+   
     // Variables to store total crime numbers
     let aggAssult = 0;
     let sexOffences = 0;
@@ -94,6 +85,38 @@ Promise.all([
     makeGraphFour();
 
 });
+
+function graphFourTable(data) {
+    counties = []
+    data[0].forEach(d => {
+        if (!(counties.includes(d.County))) {
+            counties.push(d.County)
+        }
+    });
+
+ 
+    rowCounter = 0
+    countiesList = []
+    for (i=0; i < counties.length; i++) {
+        if (i%8 == 0) {
+            rowCounter +=1
+            countiesList.push([])
+        }
+        countiesList[rowCounter-1].push(counties[i])
+    }
+
+    var tr = d3.select("tbody")
+    .selectAll("tr")
+    .data(countiesList)
+    .enter().append("tr");
+
+    var td = tr.selectAll("td")
+    .data(function(d,i) {return Object.values(d);})
+    .enter().append("td")
+    .html(function(d) {return `<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=${d}>
+    <label class="form-check-label" for="inlineCheckbox1">${d}</label>`
+    });
+};
 
 function filterData(data) {
     data.County = data.County.toUpperCase()
