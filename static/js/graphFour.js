@@ -116,7 +116,7 @@ function makeGraphFour() {
         text: crimePercentage,
         textposition: "auto",
         marker: {
-            color: ["#708090", "#8B4513", "#0000CD", "#3CB371", "#9932CC", "#FFD700", "#FF4500", "#FF1493", "#DC143C"]
+            color: ["#0000CD", "#3CB371", "#9932CC", "#FFD700", "#FF4500", "#FF1493", "#DC143C"]
         }
     }];
 
