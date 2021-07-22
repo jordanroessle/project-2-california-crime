@@ -26,9 +26,7 @@ Promise.all([
     filtered_data.Rape = +filtered_data.Rape;
     filtered_data.Robbery = +filtered_data.Robbery;
     filtered_data.Simp_Assult = +filtered_data.Simp_Assult;
-    filtered_data.Humman_Trafficking_Commercial_SA = +filtered_data.Humman_Trafficking_Commercial_SA;
-    filtered_data.Humman_Trafficking_Invol_Ser = +filtered_data.Humman_Trafficking_Invol_Ser;
-
+    
     census_data.Population = +census_data.Population
     population = census_data[0].Population
     console.log(population);
@@ -41,8 +39,6 @@ Promise.all([
     let rape = 0;
     let robbery = 0;
     let simpAssult = 0;
-    let humanTraffickingComm = 0;
-    let humanTraffickingInvol = 0;
     let offencesTotal = 0;
 
     filtered_data.forEach(city => {
@@ -54,8 +50,6 @@ Promise.all([
         city.Rape = +city.Rape;
         city.Robbery = +city.Robbery;
         city.Simp_Assult = +city.Simp_Assult;
-        city.Humman_Trafficking_Commercial_SA = +city.Humman_Trafficking_Commercial_SA;
-        city.Humman_Trafficking_Invol_Ser = +city.Humman_Trafficking_Invol_Ser;
         city.Offences_Total = +city.Offences_Total;
 
         // Add each crime number to total
@@ -66,26 +60,20 @@ Promise.all([
         rape += city.Rape;
         robbery += city.Robbery;
         simpAssult += city.Simp_Assult;
-        humanTraffickingComm += city.Humman_Trafficking_Commercial_SA;
-        humanTraffickingInvol += city.Humman_Trafficking_Invol_Ser;
         offencesTotal += city.Offences_Total;
     });
 
     crimes = {
-    "Human Trafficking/Involuntary Servitude": humanTraffickingInvol,
-    "Human Trafficking/Commercial Sex Acts": humanTraffickingComm,
-    "Simple Assault": simpAssult,
-    "Robbery": robbery,
-    "Rape": rape,
-    "Murder/ Non-negligent Manslaughter": murderAndNonnegMan,
-    "Negligent Manslaughter": manslaughterNeg,
-    "Sex Offences": sexOffences,
-    "Aggravated Assault": aggAssult
+        "Simple Assault": simpAssult,
+        "Robbery": robbery,
+        "Rape": rape,
+        "Murder/ Non-negligent Manslaughter": murderAndNonnegMan,
+        "Negligent Manslaughter": manslaughterNeg,
+        "Sex Offences": sexOffences,
+        "Aggravated Assault": aggAssult
     };
 
     crimesPer100k = {
-        "Human Trafficking/Involuntary Servitude": per100k(humanTraffickingInvol),
-        "Human Trafficking/Commercial Sex Acts": per100k(humanTraffickingComm),
         "Simple Assault": per100k(simpAssult),
         "Robbery": per100k(robbery),
         "Rape": per100k(rape),
@@ -103,10 +91,6 @@ Promise.all([
         crimePercentage.push(percentageString) 
     });
 
-    // call functions to make graphs with filtered data
-    // makeGraphOne(filtered_data);
-    // makeGraphTwo(filtered_data);
-    // makeGraphThree(filtered_data);
     makeGraphFour();
 
 });
@@ -120,18 +104,6 @@ function per100k(data) {
     return (data/population*100000)
 }
 
-
-// function makeGraphOne(data) {
-//     // use plotly to make desired graphs from the filtered data here
-
-
-
-
-//     /* should end with something like this
-//         uncomment below when trace and layout are completed */
-//     // Plotly.newPlot("graph-one", trace, layout);
-// };
-
 function makeGraphFour() {
     var values = Object.values(crimesPer100k);
     var labels = Object.keys(crimesPer100k);
@@ -144,7 +116,7 @@ function makeGraphFour() {
         text: crimePercentage,
         textposition: "auto",
         marker: {
-            color: ["#708090", "#8B4513", "#0000CD", "#3CB371", "#9932CC", "#FFD700", "#FF4500", "#FF1493", "#DC143C"]
+            color: ["#0000CD", "#3CB371", "#9932CC", "#FFD700", "#FF4500", "#FF1493", "#DC143C"]
         }
     }];
 
