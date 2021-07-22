@@ -1,3 +1,4 @@
+// global variables
 var californiaCenter = [36.78, -119.42];
 var baseZoom = 6;
 var queryUrl = "../static/data/CA_Counties.geojson";
@@ -52,11 +53,11 @@ var myMap = L.map("map", {
     layers: [outdoormap, countyLines]
 });
 
+// read json
 d3.json(queryUrl).then(function(data) {
-    // give dropdown options
-    dropDownOptions(data.features);
-    // give countyLines features
-    createFeatures(data.features, myMap).addTo(countyLines);
+    filteredFeatures = filterOutIslands(data.features);
+    dropDownOptions(filteredFeatures);
+    createFeatures(filteredFeatures, myMap).addTo(countyLines);
 });
 
 // Create layer control
@@ -64,7 +65,7 @@ L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
 }).addTo(myMap);
 
-
+// gives features to every county layer
 function createFeatures(countyData, myMap) {
     function onEachFeature(feature, layer) {
         layer.on({
@@ -82,6 +83,7 @@ function createFeatures(countyData, myMap) {
     return countyLines;
 }
 
+// gives drop down menu list of counties
 function dropDownOptions(data) {
         d3.select("#Counties")
             .selectAll("inserted-option")
@@ -91,16 +93,20 @@ function dropDownOptions(data) {
             .text(d => d.properties.COUNTY_NAME);       
 }
 
+// resets the map to original state
 function recenterMap() {
     myMap.flyTo(californiaCenter, baseZoom);
     myMap.closePopup();
     d3.select(".header").text("Please select a County");
 }
 
+// updates map based on option chosen from drop down
 function dropDownChanged(chosenCounty) {
+    // if All is chosen, reset the map
     if(chosenCounty === "All") {
         recenterMap();
     }
+    // otherwise, find the layer containing the county and center the map on that
     else {
         d3.select(".header").text(chosenCounty + " County");
         var layerKeys = Object.keys(myMap._layers);
@@ -117,12 +123,25 @@ function dropDownChanged(chosenCounty) {
 }
 
 function updateDropDown(chosenCounty) {
+    // select all options
     var options = d3.select("#Counties").selectAll("option").nodes();
-    // pop "All" selection
+    // remove "All" selection
     options.shift();
+    // change selected to true if county names match
     options.forEach(option => {
         if(option.__data__.properties.COUNTY_NAME === chosenCounty) {
             option.selected = true;
         }
     })
+}
+
+function filterOutIslands(features) {
+    /*
+        Santa Barbara 58-62
+        Ventura 63-66
+        Los Angeles 67-68
+    */
+    // removes islands under these three counties
+    features.splice(58, 11);
+    return features;
 }
