@@ -49,23 +49,23 @@ census_df.set_index('County', inplace=True)
 
 # Create additional columns to calculate the population percentages
 
-census_df['%_White'] = round((census_df.White / census_df.Population) * 100, 2)
-census_df['%_African_american'] = round((census_df.African_american / census_df.Population) * 100, 2)
-census_df['%_American_indian_alaskan_native'] = round((census_df.American_indian_alaskan_native / census_df.Population) * 100, 2)
-census_df['%_Asian'] = round((census_df.Asian / census_df.Population) * 100, 2)
-census_df['%_Pacific_islander'] = round((census_df.Pacific_islander / census_df.Population) * 100, 2)
-census_df['%_Hispanic_latino'] = round((census_df.Hispanic_latino / census_df.Population) * 100, 2)
-census_df['%_Other_race'] = round((census_df.Other_race / census_df.Population) * 100, 2)
-census_df['%_Multiple_races'] = round((census_df.Multiple_races / census_df.Population) * 100, 2)
-census_df['%_Poverty'] = round((census_df.Poverty_count / census_df.Population) * 100, 2)
-census_df['%_Employed'] = round((census_df.Employed / census_df.Population) * 100, 2)
-census_df['%_Unemployed'] = round((census_df.Unemployed / census_df.Population) * 100, 2)
-census_df['%_Armed_forces_active'] = round((census_df.Armed_forces_active / census_df.Population) * 100, 2)
+census_df['pct_White'] = round((census_df.White / census_df.Population) * 100, 2)
+census_df['pct_African_american'] = round((census_df.African_american / census_df.Population) * 100, 2)
+census_df['pct_American_indian_alaskan_native'] = round((census_df.American_indian_alaskan_native / census_df.Population) * 100, 2)
+census_df['pct_Asian'] = round((census_df.Asian / census_df.Population) * 100, 2)
+census_df['pct_Pacific_islander'] = round((census_df.Pacific_islander / census_df.Population) * 100, 2)
+census_df['pct_Hispanic_latino'] = round((census_df.Hispanic_latino / census_df.Population) * 100, 2)
+census_df['pct_Other_race'] = round((census_df.Other_race / census_df.Population) * 100, 2)
+census_df['pct_Multiple_races'] = round((census_df.Multiple_races / census_df.Population) * 100, 2)
+census_df['pct_Poverty'] = round((census_df.Poverty_count / census_df.Population) * 100, 2)
+census_df['pct_Employed'] = round((census_df.Employed / census_df.Population) * 100, 2)
+census_df['pct_Unemployed'] = round((census_df.Unemployed / census_df.Population) * 100, 2)
+census_df['pct_Armed_forces_active'] = round((census_df.Armed_forces_active / census_df.Population) * 100, 2)
 
 # Reorganize columns
-census_df = census_df[['Population', 'Income_median', 'Income_per_capita', '%_Poverty', '%_Employed', '%_Unemployed', 
-                       '%_Armed_forces_active', '%_African_american', '%_American_indian_alaskan_native', '%_Asian', 
-                      '%_Hispanic_latino', '%_Pacific_islander', '%_White', '%_Other_race', '%_Multiple_races', 
+census_df = census_df[['Population', 'Income_median', 'Income_per_capita', 'pct_Poverty', 'pct_Employed', 'pct_Unemployed', 
+                       'pct_Armed_forces_active', 'pct_African_american', 'pct_American_indian_alaskan_native', 'pct_Asian', 
+                      'pct_Hispanic_latino', 'pct_Pacific_islander', 'pct_White', 'pct_Other_race', 'pct_Multiple_races', 
                       'Poverty_count', 'Employed', 'Unemployed', 'Armed_forces_active', 'African_american', 
                       'American_indian_alaskan_native', 'Asian', 'Hispanic_latino', 'Pacific_islander', 
                       'White', 'Other_race', 'Multiple_races']]
