@@ -85,6 +85,8 @@ department_name = []
 county_name = []
 state_abbr = [] 
 ori = []
+lat = []
+lon = []
 
 response = json.loads(requests.get(f'{url}api/agencies/byStateAbbr/{state_abbrv}?API_KEY={api_key2}').text)
 
@@ -94,12 +96,17 @@ for i in range(len(response["results"])):
         county_name.append(response["results"][i]["county_name"])
         ori.append(response["results"][i]["ori"])
         state_abbr.append(response["results"][i]["state_abbr"])
+        lat.append(response["results"][i]["latitude"])
+        lon.append(response["results"][i]["longitude"])
+
 
 ## Converting to DataFrame 
 ori_df = pd.DataFrame({"Department_Name": department_name,
                         "State": state_abbr,
                         "County": county_name,
                         "Ori": ori,
+                        "Lat": lat,
+                        "Lon": lon
                         })
 
 print(' Complete\nStep 3: Obtaining and cleaning Crime data...', end='')
