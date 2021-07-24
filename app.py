@@ -47,18 +47,18 @@ class Demographics(Base):
         Population = Column(Float)
         Income_median = Column(Float)
         Income_per_capita = Column(Float)
-        Per_Poverty = Column(Float)
-        Per_Employed = Column(Float)
-        Per_Unemployed = Column(Float)
-        Per_Armed_forces_active = Column(Float)
-        Per_African_american = Column(Float)
-        Per_American_indian_alaskan_native = Column(Float)
-        Per_Asian = Column(Float)
-        Per_Hispanic_latino = Column(Float)
-        Per_Pacific_islander = Column(Float)
-        Per_White = Column(Float)
-        Per_Other_race = Column(Float)
-        Per_Multiple_races = Column(Float)
+        pct_Poverty = Column(Float)
+        pct_Employed = Column(Float)
+        pct_Unemployed = Column(Float)
+        pct_Armed_forces_active = Column(Float)
+        pct_African_american = Column(Float)
+        pct_American_indian_alaskan_native = Column(Float)
+        pct_Asian = Column(Float)
+        pct_Hispanic_latino = Column(Float)
+        pct_Pacific_islander = Column(Float)
+        pct_White = Column(Float)
+        pct_Other_race = Column(Float)
+        pct_Multiple_races = Column(Float)
         Poverty_count = Column(Float)
         Employed = Column(Float)
         Unemployed = Column(Float)
@@ -141,18 +141,18 @@ def demographic():
                         , Demographics.Population
                         , Demographics.Income_median
                         , Demographics.Income_per_capita
-                        # , Demographics.%_Poverty
-                        # , Demographics.%_Employed 
-                        # , Demographics.%_Unemployed 
-                        # , Demographics.%_Armed_forces_active  
-                        # , Demographics.%_African_american 
-                        # , Demographics.%_American_indian_alaskan_native 
-                        # , Demographics.%_Asian 
-                        # , Demographics.%_Hispanic_latino 
-                        # , Demographics.%_Pacific_islander 
-                        # , Demographics.%_White  
-                        # , Demographics.%_Other_race 
-                        # , Demographics.%_Multiple_races 
+                        , Demographics.pct_Poverty
+                        , Demographics.pct_Employed 
+                        , Demographics.pct_Unemployed 
+                        , Demographics.pct_Armed_forces_active  
+                        , Demographics.pct_African_american 
+                        , Demographics.pct_American_indian_alaskan_native 
+                        , Demographics.pct_Asian 
+                        , Demographics.pct_Hispanic_latino 
+                        , Demographics.pct_Pacific_islander 
+                        , Demographics.pct_White  
+                        , Demographics.pct_Other_race 
+                        , Demographics.pct_Multiple_races 
                         , Demographics.Poverty_count 
                         , Demographics.Employed 
                         , Demographics.Unemployed  
