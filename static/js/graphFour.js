@@ -72,7 +72,26 @@ Promise.all([
         "Negligent Manslaughter": per100k(manslaughterNeg),
         "Sex Offences": per100k(sexOffences),
         "Aggravated Assault": per100k(aggAssult)
-        };
+    };
+
+    crimesSeries = [
+        {name: "Simple Assault",
+        data: [per100k(simpAssult)]}, 
+        {name: "Robbery",
+        data: [per100k(robbery)]}, 
+        {name: "Rape",
+        data: [per100k(rape)]}, 
+        {name: "Murder/ Non-negligent Manslaughter",
+        data: [per100k(murderAndNonnegMan)]}, 
+        {name: "Negligent Manslaughter",
+        data: [per100k(manslaughterNeg)]},
+        {name: "Sex Offences",
+        data: [per100k(sexOffences)]},
+        {name: "Aggravated Assault",
+        data: [per100k(aggAssult)]}
+    ];
+
+
 
     crimePercentage = [];
 
@@ -121,42 +140,61 @@ function graphFourTable(data) {
 function filterData(data) {
     data.County = data.County.toUpperCase()
     return data.County == selectedCounty;
-}
+};
 
 function per100k(data) {
-    return (data/population*100000)
-}
+    return data/population*100000;
+};
 
-function makeGraphFour() {
-    var values = Object.values(crimesPer100k);
-    var labels = Object.keys(crimesPer100k);
-
-    var data = [{
-        type: "bar",
-        x: values,
-        y: labels,
-        orientation: "h",
-        text: crimePercentage,
-        textposition: "auto",
-        marker: {
-            color: ["#0000CD", "#3CB371", "#9932CC", "#FFD700", "#FF4500", "#FF1493", "#DC143C"]
-        }
-    }];
-
-    var layout = {
-        height: 450,
-        width: 1200,
-        title: "Crime Comparison",
-        xaxis: {
-            title: "Crime per 100,000"
+function makeGraphFour(data) {
+    Highcharts.chart('fourChart', {
+        chart: {
+            type: 'bar'
         },
-        margin: {
-            t: 50,
-            b: 50,
-            l: 250,
-            r: 50
-        }
-    };
-
-    Plotly.newPlot ("graph-four", data, layout);
+        title:{
+            text: "Crime per city"
+        },
+        subtitle: {
+            text: "Test"
+        },
+        xAxis: {
+            categories: [selectedCounty],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: "Crimes (per 100,000)",
+                align: "high"
+            },
+            labels: {
+                overflow:"justify"
+            }
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+         layout: 'vertical',
+         align: 'right',
+         verticalAlign: 'top',
+         x: -40,
+         y: 80,
+         floating: true,
+         borderWidth: 1,
+         backgroundColor:
+             Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+         shadow: true
+         },
+         credits: {
+             enabled: false
+         },
+         series: crimesSeries
+    });
 };
