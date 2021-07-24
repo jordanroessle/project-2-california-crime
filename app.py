@@ -27,6 +27,8 @@ class Crimes(Base):
         State = Column(String) 
         County = Column(String) 
         Ori = Column(String) 
+        Lat = Column(Float)
+        Lon = Column(Float)
         Agg_Assult = Column(Integer)
         Sex_Offences = Column(Integer)
         Manslaughter_Neg = Column(Integer)
@@ -106,6 +108,8 @@ def crime():
                         , Crimes.State
                         , Crimes.County
                         , Crimes.Ori
+                        , Crimes.Lat
+                        , Crimes.Lon
                         , Crimes.Agg_Assult
                         , Crimes.Sex_Offences
                         , Crimes.Manslaughter_Neg
