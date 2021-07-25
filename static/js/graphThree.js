@@ -6,7 +6,7 @@
     /*  read data, for now we can use the csv files
         make sure to put the path to the data you want to show 
         ../static/data/{filename} */
-    var file_path1 = "../static/data/CA_Police_Dept.csv";
+    var file_path1 = "../static/data/CA_Crime.csv";
     var file_path2 = "../static/data/census_data.csv";
     
     Promise.all([
@@ -111,8 +111,6 @@
         }];
     
         var layout = {
-            height: 450,
-            width: 1200,
             title: `Crime breakdown for ${selectedCounty}`,
             xaxis: {
                 title: "Crime per 100,000"
