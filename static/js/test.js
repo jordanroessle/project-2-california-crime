@@ -54,7 +54,7 @@ crimes = {
 };
 
 function makeGraphOne(data) {
-    Highcharts.chart('container', {
+    Highcharts.chart('graph-one', {
         chart: {
             type: 'bar'
         },
@@ -103,11 +103,12 @@ function makeGraphOne(data) {
              enabled: false
          },
          series: [{
+            name: "Hello",
             data: [10,10,10,10,10,10,10]
         }]
     })
 }
 
 
-    
+makeGraphOne("nom");  
    
