@@ -20,29 +20,39 @@
 
 </head>
 
-<body>
-  <!-- Highcharts JavaScript -->
 
-  <figure class="highcharts-figure">
-    <div id="graph-one"></div>
-    <p class="highcharts-description">
-      This is just a test to see if HighCharts displays properly 
-  </p>
-  </figure>
-  
+<body>
+
+  <div id="graph-one"></div>
+
   <div id="graph-two"></div>
-  <div id="graph-three"></div>
-  <div id="graph-four"></div>
+
+  <div id="graph-three" style="width:50%; height:300px; margin-bottom: 100px"></div>
+
+  <div id="graph-four" style="width:100%; height:400px;">
+    <figure class="highcharts-figure">
+      <div id="fourChart"></div>
+    </figure>
+    <div id="comparison-table">
+      <table class="table table-bordered">
+        <tbody></tbody>
+      </table>
+    </div>
+</div> 
 
 
   <!-- D3 JavaScript -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <!-- HighCharts -->
   <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   <!-- Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <!-- Our JavaScript -->
   <script type="text/javascript" src="../static/js/test.js"></script>
+  <script type="text/javascript" src="../static/js/graphThree.js"></script>
   <script type="text/javascript" src="../static/js/graphFour.js"></script>
 </body>
 
