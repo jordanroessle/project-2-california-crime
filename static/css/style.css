@@ -5,10 +5,18 @@
   }
 
   #map {
-    width: 600px; height: 700px
+    width: 600px; 
+    height: 575px;
+    padding: 0%;
   }
 
   .header {
-    padding: 40px;
+    padding: 20px;
     background-color: rgb(64, 224, 131);
+  }
+
+  #graph-one{
+    width: 600px; 
+    height: 500px;
+    margin-top: 50px;
   }

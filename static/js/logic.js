@@ -1,5 +1,5 @@
 // global variables
-var californiaCenter = [36.78, -119.42];
+var californiaCenter = [37.58, -119.42];
 var baseZoom = 6;
 var queryUrl = "../static/data/CA_Counties.geojson";
 var displayGraphs;
@@ -355,7 +355,7 @@ function demographicsGraphs(chosenCounty, filteredDemo) {
             text: 'Employment<br> Breakdown',
             align: 'center',
             verticalAlign: 'middle',
-            y: 60
+            y: 0
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -377,7 +377,7 @@ function demographicsGraphs(chosenCounty, filteredDemo) {
                 },
                 startAngle: -90,
                 endAngle: 90,
-                center: ['50%', '75%'],
+                center: ['50%', '50%'],
                 size: '90%'
             }
         },
@@ -418,7 +418,7 @@ function demographicsGraphs(chosenCounty, filteredDemo) {
             text: 'Race/Ethnicity<br> Breakdown',
             align: 'center',
             verticalAlign: 'middle',
-            y: 60
+            y: 0
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -440,7 +440,7 @@ function demographicsGraphs(chosenCounty, filteredDemo) {
                 },
                 startAngle: -90,
                 endAngle: 90,
-                center: ['50%', '75%'],
+                center: ['50%', '50%'],
                 size: '90%'
             }
         },
