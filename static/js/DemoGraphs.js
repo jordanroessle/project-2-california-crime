@@ -25,7 +25,6 @@ var file_path2 = "../static/data/census_data.csv";
 
 d3.csv(file_path2).then(function(data) {
     // filter the data based on the selectedCounty variable
-    console.log(data)
     var census_data = data.filter(filterData);
 
     census_data.forEach(county => {
@@ -61,10 +60,11 @@ d3.csv(file_path2).then(function(data) {
 
     });
 
-    console.log(pctEmployed, pctUnemployed, pctArmedForces);
-    
+
     demoGraphOne();
     demoGraphTwo();
+
+
 
 });
 function filterData(data) {
@@ -97,7 +97,7 @@ Highcharts.chart('graph-one', {
         pie: {
             dataLabels: {
                 enabled: true,
-                distance: -50,
+                distance: 50,
                 style: {
                     fontWeight: 'bold',
                     color: 'white'
@@ -115,21 +115,29 @@ Highcharts.chart('graph-one', {
         innerSize: '50%',
         data: [
             ['Employed', pctEmployed],
+            ['Other', 100-pctEmployed-pctUnemployed-pctArmedForces],
             ['Unemployed', pctUnemployed],
             ['Active Duty', pctArmedForces],
-            {
-                name: 'Other',
-                y: (100-pctEmployed-pctUnemployed-pctArmedForces),
-                dataLabels: {
-                    enabled: false
-                }
-            }
         ]
     }]
 });
 };
 
 function demoGraphTwo() {
+    var raceData = [
+        ['African American', pctAfricanAmerican],
+        ['American Indian/Alaskan Native', pctAmericanIndian],
+        ['Asian', pctAsian],
+        ['Hispanic/<br>Latino', pctHispanic],
+        ['Pacific Islander', pctPacificIslander],
+        ['White', pctWhite],
+        ['Other', pctOther],
+        ['Multiple', pctMultiple]
+    ];
+    var sortedRaceData = raceData.sort((a, b) => b[1] - a[1]);
+
+
+
     Highcharts.chart('graph-two', {
         chart: {
             plotBackgroundColor: null,
@@ -154,7 +162,7 @@ function demoGraphTwo() {
             pie: {
                 dataLabels: {
                     enabled: true,
-                    distance: -50,
+                    distance: 100,
                     style: {
                         fontWeight: 'bold',
                         color: 'white'
@@ -170,16 +178,7 @@ function demoGraphTwo() {
             type: 'pie',
             name: 'Population',
             innerSize: '50%',
-            data: [
-                ['African American', pctAfricanAmerican],
-                ['American Indian<br>Alaskan Native', pctAmericanIndian],
-                ['Asian', pctAsian],
-                ['Hispanic/<br>Latino', pctHispanic],
-                ['Pacific Islander', pctPacificIslander],
-                ['White', pctWhite],
-                ['Other', pctOther],
-                ['Multiple', pctMultiple]
-            ]
+            data: sortedRaceData
         }]
     });
     };
