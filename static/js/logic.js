@@ -2,6 +2,7 @@
 var californiaCenter = [36.78, -119.42];
 var baseZoom = 6;
 var queryUrl = "../static/data/CA_Counties.geojson";
+var displayGraphs;
 
 // define layers
 var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -73,6 +74,7 @@ function createFeatures(countyData, myMap) {
                 myMap.flyToBounds(event.target.getBounds());
                 updateDropDown(event.target.feature.properties.COUNTY_NAME);
                 d3.select(".header").text(event.target.feature.properties.COUNTY_NAME + " County");
+                displayGraphs(event.target.feature.properties.COUNTY_NAME);
             }
         })
         layer.bindPopup("<h3>" + feature.properties.COUNTY_NAME + "</h3>")
@@ -103,6 +105,9 @@ function recenterMap() {
     d3.select(".header").text("Please select a County");
     // reset dropdown
     d3.select("#Counties").selectAll("option").nodes()[0].selected = true;
+    // remove existing plots
+    d3.select("#graph-one").html("");
+    d3.select("#graph-two").html("");
 }
 
 // updates map based on option chosen from drop down
@@ -115,6 +120,7 @@ function dropDownChanged(chosenCounty) {
     else {
         // update header
         d3.select(".header").text(chosenCounty + " County");
+        // update map
         var layerKeys = Object.keys(myMap._layers);
         // removes last layer that has a key that changes 
         layerKeys.pop();
@@ -126,9 +132,12 @@ function dropDownChanged(chosenCounty) {
                 }
             }
         });
+        // display graphs
+        displayGraphs(chosenCounty);
     }
 }
 
+// update down when map is clicked 
 function updateDropDown(chosenCounty) {
     // select all options
     var options = d3.select("#Counties").selectAll("option").nodes();
@@ -142,6 +151,7 @@ function updateDropDown(chosenCounty) {
     })
 }
 
+// removes some features from geojson
 function filterOutIslands(features) {
     /*
         Santa Barbara 58-62
@@ -151,12 +161,133 @@ function filterOutIslands(features) {
     // removes islands under these three counties
     features.splice(58, 11);
     return features;
-}
+}   
+     
+        
 
 d3.json("http://127.0.0.1:5000/api/v1.0/crimes").then(function(crimeData) {
-    d3.json("http://127.0.0.1:5000/api/v1.0/demographics").then(function(demoData) {
-        console.log(crimeData);
-        console.log(demoData);
+    d3.json("http://127.0.0.1:5000/api/v1.0/demographics").then(function(demoData) {        
+
+        displayGraphs = function displayGraphs(chosenCounty) {
+            // remove existing plots if they exist
+            d3.select("#graph-one").html("");
+            d3.select("#graph-two").html("");
+
+            // filter data based on selectedCounty 
+            filteredDemo = demoData.filter(data => data.County === chosenCounty);
+            filteredCrime = crimeData.filter(data => data.County === chosenCounty.toUpperCase());
+            
+            // find total population
+            filteredDemo.Population = +filteredDemo.Population
+            population = filteredDemo[0].Population
+
+            // Variables to store total crime numbers
+            var aggAssult = 0;
+            var sexOffences = 0;
+            var manslaughterNeg = 0;
+            var murderAndNonnegMan = 0;
+            var rape = 0;
+            var robbery = 0;
+            var simpAssult = 0;
+            var offencesTotal = 0;
+
+            filteredCrime.forEach(city => {
+                // Cast each crime value to a number
+                city.Agg_Assult = +city.Agg_Assult;
+                city.Sex_Offences = +city.Sex_Offences;
+                city.Manslaughter_Neg = +city.Manslaughter_Neg;
+                city.Murder_and_Nonneg_Man = +city.Murder_and_Nonneg_Man;
+                city.Rape = +city.Rape;
+                city.Robbery = +city.Robbery;
+                city.Simp_Assult = +city.Simp_Assult;
+                city.Offences_Total = +city.Offences_Total;
         
-    })
-})
+                // Add each crime number to total if it is not NaN
+                if(city.Agg_Assult) {
+                    aggAssult += city.Agg_Assult;
+                }
+                if(city.Sex_Offences) {
+                    sexOffences += city.Sex_Offences;
+                }
+                if(city.Manslaughter_Neg) {    
+                    manslaughterNeg += city.Manslaughter_Neg;
+                }
+                if(city.Murder_and_Nonneg_Man) {
+                    murderAndNonnegMan += city.Murder_and_Nonneg_Man;
+                }
+                if(city.Rape) {
+                    rape += city.Rape;
+                }
+                if(city.Robbery) {
+                    robbery += city.Robbery;
+                }
+                if(city.Simp_Assult) {
+                    simpAssult += city.Simp_Assult;
+                }
+                if(city.Offences_Total) {
+                    offencesTotal += city.Offences_Total;
+                }
+            });
+            
+            crimes = {
+                "Simple Assault": simpAssult,
+                "Robbery": robbery,
+                "Rape": rape,
+                "Murder/ Non-negligent Manslaughter": murderAndNonnegMan,
+                "Negligent Manslaughter": manslaughterNeg,
+                "Sex Offences": sexOffences,
+                "Aggravated Assault": aggAssult
+            };
+        
+            crimesPer100k = {
+                "Simple Assault": per100k(simpAssult, population),
+                "Robbery": per100k(robbery, population),
+                "Rape": per100k(rape, population),
+                "Murder/ Non-negligent Manslaughter": per100k(murderAndNonnegMan, population),
+                "Negligent Manslaughter": per100k(manslaughterNeg, population),
+                "Sex Offences": per100k(sexOffences, population),
+                "Aggravated Assault": per100k(aggAssult, population)
+                };
+        
+            crimePercentage = [];
+        
+            Object.values(crimes).forEach(c => {
+                let percentage = (c/offencesTotal*100).toFixed(2);
+                let percentageString = `${percentage}%`
+                crimePercentage.push(percentageString) 
+            });
+            
+            var values = Object.values(crimesPer100k);
+            var labels = Object.keys(crimesPer100k);
+        
+            var data = [{
+                type: "bar",
+                x: values,
+                y: labels,
+                orientation: "h",
+                text: crimePercentage,
+                textposition: "auto",
+                marker: {
+                    color: ["#0000CD", "#3CB371", "#9932CC", "#FFD700", "#FF4500", "#FF1493", "#DC143C"]
+                }
+            }];
+        
+            var layout = {
+                title: `Crime breakdown for ${chosenCounty}`,
+                xaxis: {
+                    title: "Crime per 100,000"
+                },
+                margin: {
+                    l: 250,
+                    t: 50
+                }
+            };
+        
+            Plotly.newPlot ("graph-one", data, layout);
+        }
+        
+        function per100k(data, population) {
+            return (data/population*100000)
+        }
+    });
+});

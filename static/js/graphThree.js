@@ -41,7 +41,8 @@
             city.Robbery = +city.Robbery;
             city.Simp_Assult = +city.Simp_Assult;
             city.Offences_Total = +city.Offences_Total;
-    
+            
+            console.log(city.Agg_Assult)
             // Add each crime number to total
             aggAssult += city.Agg_Assult;
             sexOffences += city.Sex_Offences;
