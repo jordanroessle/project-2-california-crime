@@ -153,10 +153,7 @@ function filterOutIslands(features) {
     return features;
 }
 
-d3.json("http://127.0.0.1:5000/api/v1.0/crimes").then(function(crimeData) {
-    d3.json("http://127.0.0.1:5000/api/v1.0/demographics").then(function(demoData) {
-        console.log(crimeData);
-        console.log(demoData);
-        
-    })
+// Flask App
+d3.json("http://127.0.0.1:5000/api/v1.0/demographics").then(function(data, err) {
+    console.log(data);
 })

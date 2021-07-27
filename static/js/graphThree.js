@@ -14,6 +14,7 @@
         d3.csv(file_path2),
     ]).then(function(data) {
         // filter the data based on the selectedCounty variable
+        console.log(data)
         var filtered_data = data[0].filter(filterData);
         var census_data = data[1].filter(filterData);
     

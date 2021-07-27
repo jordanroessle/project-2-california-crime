@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from sqlalchemy import Column, Integer, String, Float 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from sqlalchemy.sql.sqltypes import Float
 
 
@@ -22,7 +22,6 @@ Base = declarative_base()
 class Crimes(Base):
         __tablename__ = 'crimesByDepartment'
         rowid = Column(Integer, primary_key=True)
-        #index',
         Department_Name = Column(String) 
         State = Column(String) 
         County = Column(String) 
@@ -88,11 +87,12 @@ app = Flask(__name__)
 @app.route("/")
 def welcome():
     """List all available api routes."""
-    return (
-        f"Available Routes:<br/>"
-        f"/api/v1.0/crimes<br/>"
-        f"/api/v1.0/demographics"
-    )
+    return render_template("index.html")
+    # return (
+    #     f"Available Routes:<br/>"
+    #     f"/api/v1.0/crimes<br/>"
+    #     f"/api/v1.0/demographics"
+    # )
 
 
 @app.route("/api/v1.0/crimes")
@@ -122,14 +122,20 @@ def crime():
                         , Crimes.Offences_Total
                        ).all()
 
+
     session.close()
+
+    # grab column names
+    column_names = Crimes.__table__.columns.keys()
+    # pop rowid
+    column_names.pop(0)
     
-    print(results_crime)
+    # make list of dictionaries to be returned
+    return_list = []
+    for department in results_crime:
+        return_list.append(dict(zip(column_names, department)))
 
-    # # Convert list of tuples into normal list
-    all_crimes = list(np.ravel(results_crime))
-
-    return jsonify(all_crimes)
+    return jsonify(return_list)
 
 
 @app.route("/api/v1.0/demographics")
@@ -172,10 +178,18 @@ def demographic():
                        ).all()
 
     session.close()
-    
-    print(results_demographic)
 
-    return jsonify(results_demographic)
+    # grab column names
+    column_names = Demographics.__table__.columns.keys()
+    # pop rowid
+    column_names.pop(0)
+    
+    # make list of dictionaries to be returned
+    return_list = []
+    for county in results_demographic:
+        return_list.append(dict(zip(column_names, county)))
+
+    return jsonify(return_list)
 
 if __name__ == '__main__':
     app.run(debug=True)
