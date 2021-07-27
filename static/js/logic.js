@@ -108,6 +108,7 @@ function recenterMap() {
     // remove existing plots
     d3.select("#graph-one").html("");
     d3.select("#graph-two").html("");
+    d3.select("#graph-three").html("");
 }
 
 // updates map based on option chosen from drop down
@@ -181,113 +182,273 @@ d3.json("http://127.0.0.1:5000/api/v1.0/crimes").then(function(crimeData) {
             filteredDemo.Population = +filteredDemo.Population
             population = filteredDemo[0].Population
 
-            // Variables to store total crime numbers
-            var aggAssult = 0;
-            var sexOffences = 0;
-            var manslaughterNeg = 0;
-            var murderAndNonnegMan = 0;
-            var rape = 0;
-            var robbery = 0;
-            var simpAssult = 0;
-            var offencesTotal = 0;
-
-            filteredCrime.forEach(city => {
-                // Cast each crime value to a number
-                city.Agg_Assult = +city.Agg_Assult;
-                city.Sex_Offences = +city.Sex_Offences;
-                city.Manslaughter_Neg = +city.Manslaughter_Neg;
-                city.Murder_and_Nonneg_Man = +city.Murder_and_Nonneg_Man;
-                city.Rape = +city.Rape;
-                city.Robbery = +city.Robbery;
-                city.Simp_Assult = +city.Simp_Assult;
-                city.Offences_Total = +city.Offences_Total;
-        
-                // Add each crime number to total if it is not NaN
-                if(city.Agg_Assult) {
-                    aggAssult += city.Agg_Assult;
-                }
-                if(city.Sex_Offences) {
-                    sexOffences += city.Sex_Offences;
-                }
-                if(city.Manslaughter_Neg) {    
-                    manslaughterNeg += city.Manslaughter_Neg;
-                }
-                if(city.Murder_and_Nonneg_Man) {
-                    murderAndNonnegMan += city.Murder_and_Nonneg_Man;
-                }
-                if(city.Rape) {
-                    rape += city.Rape;
-                }
-                if(city.Robbery) {
-                    robbery += city.Robbery;
-                }
-                if(city.Simp_Assult) {
-                    simpAssult += city.Simp_Assult;
-                }
-                if(city.Offences_Total) {
-                    offencesTotal += city.Offences_Total;
-                }
-            });
-            
-            crimes = {
-                "Simple Assault": simpAssult,
-                "Robbery": robbery,
-                "Rape": rape,
-                "Murder/ Non-negligent Manslaughter": murderAndNonnegMan,
-                "Negligent Manslaughter": manslaughterNeg,
-                "Sex Offences": sexOffences,
-                "Aggravated Assault": aggAssult
-            };
-        
-            crimesPer100k = {
-                "Simple Assault": per100k(simpAssult, population),
-                "Robbery": per100k(robbery, population),
-                "Rape": per100k(rape, population),
-                "Murder/ Non-negligent Manslaughter": per100k(murderAndNonnegMan, population),
-                "Negligent Manslaughter": per100k(manslaughterNeg, population),
-                "Sex Offences": per100k(sexOffences, population),
-                "Aggravated Assault": per100k(aggAssult, population)
-                };
-        
-            crimePercentage = [];
-        
-            Object.values(crimes).forEach(c => {
-                let percentage = (c/offencesTotal*100).toFixed(2);
-                let percentageString = `${percentage}%`
-                crimePercentage.push(percentageString) 
-            });
-            
-            var values = Object.values(crimesPer100k);
-            var labels = Object.keys(crimesPer100k);
-        
-            var data = [{
-                type: "bar",
-                x: values,
-                y: labels,
-                orientation: "h",
-                text: crimePercentage,
-                textposition: "auto",
-                marker: {
-                    color: ["#0000CD", "#3CB371", "#9932CC", "#FFD700", "#FF4500", "#FF1493", "#DC143C"]
-                }
-            }];
-        
-            var layout = {
-                title: `Crime breakdown for ${chosenCounty}`,
-                xaxis: {
-                    title: "Crime per 100,000"
-                },
-                margin: {
-                    l: 250,
-                    t: 50
-                }
-            };
-        
-            Plotly.newPlot ("graph-one", data, layout);
-        }
-        
-        function per100k(data, population) {
-            return (data/population*100000)
+            crimeBreakdownGraph(chosenCounty, population, filteredCrime);
+            demographicsGraphs(chosenCounty, filteredDemo);
         }
     });
 });
+
+
+function per100k(data, population) {
+    return (data/population*100000)
+}
+
+function crimeBreakdownGraph(chosenCounty, population, filteredCrime) {
+
+    // Variables to store total crime numbers
+    var aggAssult = 0;
+    var sexOffences = 0;
+    var manslaughterNeg = 0;
+    var murderAndNonnegMan = 0;
+    var rape = 0;
+    var robbery = 0;
+    var simpAssult = 0;
+    var offencesTotal = 0;
+
+    filteredCrime.forEach(city => {
+        // Cast each crime value to a number
+        city.Agg_Assult = +city.Agg_Assult;
+        city.Sex_Offences = +city.Sex_Offences;
+        city.Manslaughter_Neg = +city.Manslaughter_Neg;
+        city.Murder_and_Nonneg_Man = +city.Murder_and_Nonneg_Man;
+        city.Rape = +city.Rape;
+        city.Robbery = +city.Robbery;
+        city.Simp_Assult = +city.Simp_Assult;
+        city.Offences_Total = +city.Offences_Total;
+
+        // Add each crime number to total if it is not NaN
+        if(city.Agg_Assult) {
+            aggAssult += city.Agg_Assult;
+        }
+        if(city.Sex_Offences) {
+            sexOffences += city.Sex_Offences;
+        }
+        if(city.Manslaughter_Neg) {    
+            manslaughterNeg += city.Manslaughter_Neg;
+        }
+        if(city.Murder_and_Nonneg_Man) {
+            murderAndNonnegMan += city.Murder_and_Nonneg_Man;
+        }
+        if(city.Rape) {
+            rape += city.Rape;
+        }
+        if(city.Robbery) {
+            robbery += city.Robbery;
+        }
+        if(city.Simp_Assult) {
+            simpAssult += city.Simp_Assult;
+        }
+        if(city.Offences_Total) {
+            offencesTotal += city.Offences_Total;
+        }
+    });
+    
+    crimes = {
+        "Simple Assault": simpAssult,
+        "Robbery": robbery,
+        "Rape": rape,
+        "Murder/ Non-negligent Manslaughter": murderAndNonnegMan,
+        "Negligent Manslaughter": manslaughterNeg,
+        "Sex Offences": sexOffences,
+        "Aggravated Assault": aggAssult
+    };
+
+    crimesPer100k = {
+        "Simple Assault": per100k(simpAssult, population),
+        "Robbery": per100k(robbery, population),
+        "Rape": per100k(rape, population),
+        "Murder/ Non-negligent Manslaughter": per100k(murderAndNonnegMan, population),
+        "Negligent Manslaughter": per100k(manslaughterNeg, population),
+        "Sex Offences": per100k(sexOffences, population),
+        "Aggravated Assault": per100k(aggAssult, population)
+        };
+
+    crimePercentage = [];
+
+    Object.values(crimes).forEach(c => {
+        let percentage = (c/offencesTotal*100).toFixed(2);
+        let percentageString = `${percentage}%`
+        crimePercentage.push(percentageString) 
+    });
+    
+    var values = Object.values(crimesPer100k);
+    var labels = Object.keys(crimesPer100k);
+
+    var data = [{
+        type: "bar",
+        x: values,
+        y: labels,
+        orientation: "h",
+        text: crimePercentage,
+        textposition: "auto",
+        marker: {
+            color: ["#0000CD", "#3CB371", "#9932CC", "#FFD700", "#FF4500", "#FF1493", "#DC143C"]
+        }
+    }];
+
+    var layout = {
+        title: `Crime breakdown for ${chosenCounty}`,
+        margin: {
+            l: 250,
+            t: 50
+        }
+    };       
+    Plotly.newPlot ("graph-one", data, layout);
+}
+
+
+function demographicsGraphs(chosenCounty, filteredDemo) {
+    var population;
+    var incomePerCapita;
+    var pctPoverty;
+    var pctEmployed;
+    var pctUnemployed;
+    var pctArmedForces;
+    var pctAfricanAmerican;
+    var pctAmericanIndian;
+    var pctAsian;
+    var pctHispanic;
+    var pctPacificIslander;
+    var pctWhite;
+    var pctOther;
+    var pctMultiple;
+
+    filteredDemo.forEach(county => {
+        county.Population = +county.Population;
+        county.Income_per_capita = +county.Income_per_capita;
+        county.pct_Poverty = +county.pct_Poverty;
+        county.pct_Employed = +county.pct_Employed;
+        county.pct_Unemployed = +county.pct_Unemployed;
+        county.pct_Armed_forces_active = +county.pct_Armed_forces_active;
+        county.pct_African_american = +county.pct_African_american;
+        county.pct_American_indian_alaskan_native = +county.pct_American_indian_alaskan_native;
+        county.pct_Asian = +county.pct_Asian;
+        county.pct_Hispanic_latino = +county.pct_Hispanic_latino;
+        county.pct_Pacific_islander = +county.pct_Pacific_islander;
+        county.pct_White = +county.pct_White;
+        county.pct_Other_race = +county.pct_Other_race;
+        county.pct_Multiple_races = +county.pct_Multiple_races;
+        
+        population = county.Population;
+        incomePerCapita = county.Income_per_capita;
+        pctPoverty = county.pct_Poverty;
+        pctEmployed = county.pct_Employed;
+        pctUnemployed = county.pct_Unemployed;
+        pctArmedForces = county.pct_Armed_forces_active;
+        pctAfricanAmerican = county.pct_African_american;
+        pctAmericanIndian = county.pct_American_indian_alaskan_native;
+        pctAsian = county.pct_Asian;
+        pctHispanic = county.pct_Hispanic_latino;
+        pctPacificIslander = county.pct_Pacific_islander;
+        pctWhite = county.pct_White;
+        pctOther = county.pct_Other_race;
+        pctMultiple = county.pct_Multiple_races;
+    });
+
+    Highcharts.chart('graph-two', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false
+        },
+        title: {
+            text: 'Employment<br> Breakdown',
+            align: 'center',
+            verticalAlign: 'middle',
+            y: 60
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    distance: 30,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'black'
+                    }
+                },
+                startAngle: -90,
+                endAngle: 90,
+                center: ['50%', '75%'],
+                size: '90%'
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Population',
+            innerSize: '50%',
+            data: [
+                ['Employed', pctEmployed],
+                ['Other', 100-pctEmployed-pctUnemployed-pctArmedForces],
+                ['Unemployed', pctUnemployed],
+                ['Active Duty', pctArmedForces],
+            ]
+        }]
+    });
+
+    var raceData = [
+        ['African American', pctAfricanAmerican],
+        ['American Indian/Alaskan Native', pctAmericanIndian],
+        ['Asian', pctAsian],
+        ['Hispanic/<br>Latino', pctHispanic],
+        ['Pacific Islander', pctPacificIslander],
+        ['White', pctWhite],
+        ['Other', pctOther],
+        ['Multiple', pctMultiple]
+    ];
+    var sortedRaceData = raceData.sort((a, b) => b[1] - a[1]);
+
+
+
+    Highcharts.chart('graph-three', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false
+        },
+        title: {
+            text: 'Race/Ethnicity<br> Breakdown',
+            align: 'center',
+            verticalAlign: 'middle',
+            y: 60
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    distance: 30,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'black'
+                    }
+                },
+                startAngle: -90,
+                endAngle: 90,
+                center: ['50%', '75%'],
+                size: '90%'
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Population',
+            innerSize: '50%',
+            data: sortedRaceData
+        }]
+    });
+}

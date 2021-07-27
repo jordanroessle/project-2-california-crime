@@ -41,25 +41,29 @@
         <button type="button" class="btn btn-primary" onclick="recenterMap()">Reset Map</button>
       </div>
     </div>
-
+    <br>
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-lg-6 col-md-12">
         <!-- The div that holds the map -->
         <div id="map"></div>
       </div>
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-md-12">
-            <!-- The div that holds the first graph -->
-            <div id="graph-one"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <!-- The div that holds the second graph -->
+      <div class="col-lg-6 col-md-12">
+        <!-- The div that holds the first graph -->
+          <div id="graph-one"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <!-- Holds the first donut graph -->
+          <figure class="highcharts-figure">
             <div id="graph-two"></div>
-          </div>
+          </figure>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <!-- Holds the second donut graph -->
+          <figure class="highcharts-figure">
+            <div id="graph-three"></div>
+          </figure>
         </div>
       </div>
 
@@ -75,7 +79,15 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <!-- Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
+  <!-- HighCharts -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+
+
   <!-- API key -->
   <script type="text/javascript" src="../static/js/config.js"></script>
   <!-- Our JavaScript -->
