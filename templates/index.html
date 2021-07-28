@@ -25,9 +25,15 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h2 class="header" style="text-align: center;">Please select a County</h2>
-      </div>
+      <h1 class="title" style="text-align: center;">
+        <span class="title-image"><img style="height: 150px; width: 225px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/320px-Flag_of_California.svg.png"
+        alt="California Flag"></span>
+        <span class="title-text">Crime Numbers and Demographics by County</span>
+      </h1>
+    </div>
+    <div class="row">
+      <h2 class="header" style="text-align: center;">Please select a County:</h2>
     </div>
     <div class="row selections">
       <div class="col-md-3">
@@ -61,13 +67,13 @@
       </div>
       <div class="col-lg-6 col-md-12">
         <!-- The div that holds the first graph -->
-          <figure class="plotly-figure">
+          <figure>
             <div id="graph-one"></div>
           </figure>
       </div>
       <div class ="row">
-        <div class="col-md-12">
-          <h3 class="subheader" style="text-align: center;">Demographics:</h3>
+        <div class="col-md-12 subheader" style="visibility: hidden;">
+          <h3 >Demographics:</h3>
         </div>
       </div>
       <div class="row">

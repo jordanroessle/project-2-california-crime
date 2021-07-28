@@ -3,27 +3,61 @@
   height: 450px;
 }
 
-.header {
+.title {
   margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 30px;
-  background-color: rgb(99, 228, 168);
-  font-weight: 1500;
-  font-style: bold;
+  margin-bottom: 0;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: navy;  
+  display: table;
+  width:100%;
+}
+
+.title-image, .header-text {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.title-text {
+  font-weight: bolder;
+  font-size: 50px;
+  color: white;
+}
+
+.header {
+  padding-bottom: 30px;
+  background-color: navy;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
 }
 
 body {
   background-color: #ededed;
 }
 
-figure {
+.figure {
   width: 600px; 
   height: 500px;
 }
 
 .subheader {
+  margin-bottom: 25px;
   padding: 15px;
-  background-color: rgb(148, 236, 195);
-  font-weight: 850;
-  visibility: hidden;
+  background-color: navy;
+  text-align: center;
+  color: white;
+}
+
+.subheader h3 {
+  font-weight: bold;
+}
+
+.subheader p {
+  font-size: 20px;
+}
+
+.comparisons {
+  margin-bottom: 20px;
 }
