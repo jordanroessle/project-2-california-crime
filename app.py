@@ -93,6 +93,10 @@ def welcome():
 def compareCounties():
     return render_template("visuals.html")
 
+@app.route("/dataTable")
+def dataTable():
+    return render_template("table.html")
+
 
 @app.route("/api/v1.0/crimes")
 def crime():
