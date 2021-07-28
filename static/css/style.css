@@ -1,22 +1,17 @@
-/* set map, body, and html to 100% of the screen size */
-  body,
-  html {
-    height: 100%;
-  }
+#map {
+  width: 600px; 
+  height: 575px;
+  padding: 0%;
+}
 
-  #map {
-    width: 600px; 
-    height: 575px;
-    padding: 0%;
-  }
+.header {
+  padding: 20px;
+  background-color: silver;
+  font-weight: 1000;
+}
 
-  .header {
-    padding: 20px;
-    background-color: rgb(64, 224, 131);
-  }
-
-  #graph-one{
-    width: 600px; 
-    height: 500px;
-    margin-top: 50px;
-  }
+#graph-one{
+  width: 600px; 
+  height: 500px;
+  margin-top: 50px;
+}
