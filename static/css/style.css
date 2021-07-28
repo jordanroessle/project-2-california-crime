@@ -1,17 +1,29 @@
 #map {
   width: 600px; 
-  height: 575px;
-  padding: 0%;
+  height: 450px;
 }
 
 .header {
-  padding: 20px;
-  background-color: silver;
-  font-weight: 1000;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 30px;
+  background-color: rgb(99, 228, 168);
+  font-weight: 1500;
+  font-style: bold;
 }
 
-#graph-one{
+body {
+  background-color: #ededed;
+}
+
+figure {
   width: 600px; 
   height: 500px;
-  margin-top: 50px;
+}
+
+.subheader {
+  padding: 15px;
+  background-color: rgb(148, 236, 195);
+  font-weight: 850;
+  visibility: hidden;
 }
