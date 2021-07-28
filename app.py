@@ -89,8 +89,8 @@ def welcome():
     """List all available api routes."""
     return render_template("index.html")
 
-@app.route("/compareCities")
-def compareCities():
+@app.route("/compareCounties")
+def compareCounties():
     return render_template("visuals.html")
 
 
