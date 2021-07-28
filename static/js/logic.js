@@ -109,6 +109,10 @@ function recenterMap() {
     d3.select("#graph-one").html("");
     d3.select("#graph-two").html("");
     d3.select("#graph-three").html("");
+    // Hide subheader
+    d3.select(".subheader").style("visibility", "hidden");
+    d3.select(".subheader").selectAll("p").remove();
+    
 }
 
 // updates map based on option chosen from drop down
@@ -133,8 +137,10 @@ function dropDownChanged(chosenCounty) {
                 }
             }
         });
+        // removes previous county demo info
+        d3.select(".subheader").selectAll("p").remove();
         // display graphs
-        displayGraphs(chosenCounty);
+        displayGraphs(chosenCounty);        
     }
 }
 
@@ -344,6 +350,11 @@ function demographicsGraphs(chosenCounty, filteredDemo) {
         pctOther = county.pct_Other_race;
         pctMultiple = county.pct_Multiple_races;
     });
+
+    // Unhide subheader
+    d3.select(".subheader")
+    .style("visibility", "visible")
+    .append("p").text(`Population: ${new Intl.NumberFormat().format(population)} Median Income: $${new Intl.NumberFormat().format(incomePerCapita)} Poverty: ${pctPoverty}%`);
 
     Highcharts.chart('graph-two', {
         chart: {
