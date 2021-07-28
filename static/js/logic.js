@@ -74,6 +74,8 @@ function createFeatures(countyData, myMap) {
                 myMap.flyToBounds(event.target.getBounds());
                 updateDropDown(event.target.feature.properties.COUNTY_NAME);
                 d3.select(".header").text(event.target.feature.properties.COUNTY_NAME + " County");
+                // removes previous county demo info
+                d3.select(".subheader").selectAll("p").remove();
                 displayGraphs(event.target.feature.properties.COUNTY_NAME);
             }
         })
