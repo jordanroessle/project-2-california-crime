@@ -158,7 +158,7 @@ function makeGraphFour(data, selectedCounty) {
             height: "600px"
         },
         title:{
-            text: "Crime per city", 
+            text: "Crime per County", 
             align: "center"
         },
         xAxis: {
