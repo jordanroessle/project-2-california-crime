@@ -88,17 +88,13 @@ app = Flask(__name__)
 def welcome():
     """List all available api routes."""
     return render_template("index.html")
-    # return (
-    #     f"Available Routes:<br/>"
-    #     f"/api/v1.0/crimes<br/>"
-    #     f"/api/v1.0/demographics"
-    # )
+
+@app.route("/compareCities")
+def compareCities():
+    return render_template("visuals.html")
 
 
 @app.route("/api/v1.0/crimes")
-
-
-
 def crime():
     # Create our session (link) from Python to the DB
     session = Session(bind=engine)
