@@ -8,8 +8,8 @@ var filterByCounties;
 /*  read data, for now we can use the csv files
     make sure to put the path to the data you want to show 
     ../static/data/{filename} */
-var route1 = "http://127.0.0.1:5000/api/v1.0/crimes";
-var route2 = "http://127.0.0.1:5000/api/v1.0/demographics";
+var route1 = "/api/v1.0/crimes";
+var route2 = "/api/v1.0/demographics";
 
 
 

@@ -174,8 +174,8 @@ function filterOutIslands(features) {
      
         
 
-d3.json("http://127.0.0.1:5000/api/v1.0/crimes").then(function(crimeData) {
-    d3.json("http://127.0.0.1:5000/api/v1.0/demographics").then(function(demoData) {        
+d3.json("/api/v1.0/crimes").then(function(crimeData) {
+    d3.json("/api/v1.0/demographics").then(function(demoData) {        
 
         displayGraphs = function displayGraphs(chosenCounty) {
             // remove existing plots if they exist
