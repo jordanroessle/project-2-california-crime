@@ -104,7 +104,7 @@ function recenterMap() {
     // close popups
     myMap.closePopup();
     // reset header
-    d3.select(".header").text("Please select a County");
+    d3.select(".header").text("Please select a County:");
     // reset dropdown
     d3.select("#Counties").selectAll("option").nodes()[0].selected = true;
     // remove existing plots
